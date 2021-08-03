@@ -23,9 +23,7 @@ jobs:
             updmap-sys --force --enable Map=emerald.map
             mktexlsr
             pdflatex -synctex=1 -interaction=nonstopmode "./MyCookbook".tex
-
-      - name: Create deploy directory
-        run: mkdir deploy
+            pdflatex -synctex=1 -interaction=nonstopmode "./MyCookbook".tex
       
       - name: Copy Cookbook
         uses: canastro/copy-file-action@master
