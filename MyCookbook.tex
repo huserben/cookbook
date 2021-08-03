@@ -1,0 +1,2884 @@
+\documentclass[%
+a4paper,
+%twoside,
+11pt
+]{article}
+
+% encoding, font, language
+
+\usepackage[german]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{nicefrac}
+
+\usepackage[
+    handwritten,
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+\definecolor{mygreen}{rgb}{0,.5,0}
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+\inputencoding{latin1}
+
+\setRecipeColors
+{%
+    recipename = mygreen,
+    ing = black,
+    inghead = black,
+    prep,
+    prephead,
+    hint,
+    hinthead,
+}
+
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+\renewcommand{\subsectionmark}[1]
+{% no implementation to display the section name instead
+}
+
+%%%%%%%%%%
+% hyperref
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Benjamin Huser},
+    pdftitle             = {Benjs wunderbare Welt des Kochens},
+    pdfsubject           = {Benjs wunderbare Welt des Kochens},
+    pdfkeywords          = {cookbook},
+    pdfstartview         = {FitV},             
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {false},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black}, 
+    urlcolor             = {black}
+    citecolor            = {black}, 
+    filecolor            = {black},
+}
+% hyperref
+%%%%%%%%%%
+
+\renewcommand{\step}
+{%
+	\stepcounter{step}%
+	\lettrine
+	[%
+	lines=2,
+	lhang=0,          % space into margin, value between 0 and 1
+	loversize=0.15,   % enlarges the height of the capital
+	slope=0em,
+	findent=1em,      % gap between capital and intended text
+	nindent=0em       % shifts all intended lines, begining with the second line
+	]{\thestep}{}%
+}
+
+
+\begin{document}
+  
+\title{Benjs wunderbare Welt des Kochens}
+\author{Benjamin Huser}
+\maketitle
+
+
+\newpage
+\renewcommand*\contentsname{Inhalt}
+\tableofcontents
+
+\vspace{9em}
+
+\newpage
+\section{Snacks}
+
+\begin{recipe}
+[ 
+    preparationtime = {\unit[10]{min}},
+    bakingtime,
+    bakingtemperature,
+    portion = {\portion{4}},
+    calory
+]
+{K"asedip f"ur Nachos}
+    
+    \graph
+    {
+        small=pictures/kaesedip/kaesedip_small.png
+    }
+    
+    \ingredients
+    {
+        \unit[300]{ml} & Milch\\
+        \unit[180]{g}  & Gouda \\
+        \unit[90]{g} & Peperoni  \\
+        1-2 & kleine Chilischoten\\
+        \unit[1]{Packung} & Schmelzk"ase\\
+        \unit[3]{EL} & Hot-Chili-Sauce \\
+        \unit[20]{g} & Speisest"arke
+    }
+    
+    \preparation
+    {%
+    	\step Schmelzk"ase sowie Gouda, falls dieser nicht gerieben ist, klein schneiden. Die Peperoni und Chilischoten ebenfalls in kleine St"ucke schneiden.
+        \step Die Milch in einer Pfanne erw"armen. Etwas Milch f"ur das Anr"uhren mit Speisest"arke zur"uckhalten.
+        \step Den Gouda in der warmen Milch schmelzen lassen.
+        \step Sobald der K"ase geschmolzen ist, den Schmelzk"ase sowie die \unit[3]{EL} Hot-Chili-Sauce sowie die Peperoni und Chilischoten hinzugeben. Das ganze kurz aufkochen.
+        \step Sobald sich der Schmelzk"ase verfl"ussigt hat, kann man mit der zur"uckbehaltenen Milch die Speisest"arke anr"uhren und in die Pfanne geben.
+        \step Nochmals etwas aufkochen und dann vom Herd nehmen
+    }
+    
+    \hint
+    {%
+        Alternativ oder zus"atzlich zum Gouda kann auch Mozarella verwendet werden. \\
+        Wem es zu scharf ist, eine gr"une Peperoni ist milder als die Rote. \\
+        Dip kann auch im K"uhlschrank "uber l"angere Zeit gehalten werden. Dann entweder kalt geniessen oder vor dem Verzehr kurz aufw"armen.
+    }
+\end{recipe}
+
+\newpage
+\begin{recipe}
+	[ 
+	preparationtime = {\unit[180]{min}},
+	bakingtime = {\unit[30]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+	portion = {\portion{1}},
+	calory
+	]
+	{Zopf}
+	
+	\graph
+	{
+		small=pictures/zopf/zopf.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Zopfmehl\\
+		\unit[0.75]{EL} & Salz \\
+		\unit[1]{TL} & Zucker \\
+		\unit[20]{g} & Hefe\\
+		\unit[3]{dl} & Milch \\
+		\unit[60]{g} & Butter \\
+		\\
+		\unit[1]{EL} & Milch oder Rahm \\
+		1 & Eigelb
+	}
+	
+	\preparation
+	{%
+		\step Mehl, Salz und Zucker in einer Schüssel mischen.
+		\step Hefe zerbröckeln, daruntermischen.
+		\step Butter in Würfel schneiden, mit der Milch beigeben, mischen, zu einem weichen glatten Teig kneten.
+		\step Teig zugedeckt bei Raumtemperatur ca. 1½ Std. aufs Doppelte aufgehen lassen.
+		\step Teig in zwei Portionen teilen, zu je ca. 70 cm langen Strängen formen, die an den Enden dünner werden.
+		\step Stränge zu einem Zopf flechten, auf ein mit Backpapier belegtes Blech legen.
+		\step Eigelb und Milch verrühren, Zopf damit bestreichen.
+		\step Auf einem Backpapier nochmals 30-60 Minuten aufgehen lassen. Danach nochmals bestreichen.
+		\step Bei \unit[200]{C} im unteren Teil des Ofens für ca 30 Minuten backen.
+	}
+	
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[ 
+	preparationtime = {\unit[140]{min}},
+	bakingtime = {\unit[45]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+	portion = {\portion{1}},
+	calory
+	]
+	{Speckzopf}
+	
+	\graph
+	{
+		big=pictures/speckzopf/speckzopf.png
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Zopfmehl (oder zu gleichen Teilen Weiss- und Dinkelmehl)\\
+		\unit[1.5]{TL}  & Salz \\
+		wenig & Pfeffer  \\
+		etwas & Rosmarin\\
+		\unit[10]{g} & Hefe\\
+		\unit[3-3.5]{dl} & Milch \\
+		\unit[25]{g} & Butter \\
+		\unit[175-200]{g} & Speckw"urfeli \\
+		1 & Ei
+	}
+	
+	\preparation
+	{%
+		\step Butter schmelzen lassen, abk"uhlen lassen.
+		\step Mehl, Salz, Pfeffer und Rosmarin in einer Sch"ussel mischen und eine Mulde formen.
+		\step Hefe mit etwas Milch aufl"osen und in die Mulde giessen.
+		\step Restliche Milch und Butter beif"ugen, das Ganze zu einem geschmeidigen Teig kneten.
+		\step Zugedeckt eine Stunde ruhen lassen.
+		\step Speck in einer Bratpfanne anbraten und dann abk"uhlen lassen. Danach unter den Teig kneten.
+		\step Teig zu gleich grossen Str"angen rollen und zu einem Zopf flechten. Auf einem Backpapier nochmals 30-60 Minuten aufgehen lassen.
+		\step Mit einem Eigelb bepinseln.
+		\step Bei \unit[200]{C} im unteren Teil des Ofens f"ur 35-45 Minuten backen.
+	}
+	
+	
+\end{recipe}
+
+\newpage
+
+\begin{recipe}
+	[ 
+	preparationtime = {\unit[10]{min}},
+	bakingtime = {\unit[17]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = 2,
+	calory
+	]
+	{Egg-Bacon Muffins}
+	
+	\graph
+	{
+		small=pictures/egg-bacon_muffin/egg-bacon_muffin.jpg
+	}
+	
+	\ingredients
+	{
+		4 & Eier\\
+		etwas & Toastbrot \\
+		\unit[4]{Tranchen} & Speck\\
+		etwas & Reibk"ase \\
+		wenig & Pfeffer  \\
+		etwas & Paprika
+	}
+	
+	\preparation
+	{%
+		\step Mit einem Glas Toastbrot ausstechen und als Boden in Muffin Form legen
+		\step Rand der Form mit Speck umgeben
+		\step Etwas Reibk"ase auf Boden geben
+		\step Ei hinzuf"ugen
+		\step Nach Geschmack w"urzen
+		\step F"ur 17 Minuten in den Ofen
+	}
+	
+	
+\end{recipe}
+
+\newpage
+
+\begin{recipe}
+	[ 
+	preparationtime = {\unit[80-120]{min}},
+	bakingtime = {\unit[8-10]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[250]{°C}}},
+	portion = 4 Pizzen,
+	calory
+	]
+	{Pizzateig}
+	
+	\graph
+	{
+		big=pictures/pizza_teig/pizza_teig.png
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Mehl \\
+		\unit[7]{g} & Hefe \\
+		\unit[3]{dl} & lauwarmes Wasser \\
+		\unit[1]{EL} & Salz \\
+		\unit[30]{ml} & Olivenöl
+	}
+	
+	\preparation
+	{%
+		\step Mehl mit Hefe gut durchrühren
+		\step Nach und nach Wasser hinzugeben bis ein glatter Teig entsteht
+		\step Salz und Öl dazugeben und mehrere Minuten durchkneten
+		\step Teig 1-2h abgedeckt in der Schüssel gehen lassen
+		\step Teig auswallen und nach belieben belegen
+		\step Für 8-10 Minuten im auf 250°C vorgehizten Ofen backen
+	}
+
+\hint{
+	Teig kann auch 24h im Kühlschrank aufgehen
+}
+	
+	
+\end{recipe}
+
+\newpage
+
+\begin{recipe}
+	[ 
+	preparationtime = {\unit[120]{min}},
+	bakingtime = {\unit[45]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[220]{°C}}},
+	portion = 2 Brote,
+	calory
+	]
+	{Zürcherbrot}
+	
+	\graph
+	{
+		big=pictures/zuercherbrot/zuercherbrot.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[1]{kg} & Mehl \\
+		\unit[30]{g} & Hefe \\
+		\unit[7]{dl} & Wasser \\
+		\unit[20]{g} & Salz
+	}
+	
+	\preparation
+	{%
+		\step Mehl und Hefe in eine grosse Schüssel geben, das Wasser beigeben und zu einem Teig aufgreifen, je nach Mehltyp das Wasser leicht korrigieren
+		\step Das Salz beigeben, den Teig ca. 10 Minuten geschmeidig kneten
+		\step Die Schüssel mit einem Küchentuch (oder Plastik) zudecken und ca. 2h aufs doppelte aufgehen lassen
+		\step Den Backofen auf 220 Grad Ober-/Unterhitze vorheizen
+		\step Den Teig aus der Schüssel nehmen, leicht zusammendrücken und zwei lange Brotlaibe formen
+		\step Die Brote auf ein mit Backpapier belegtes Blech legen und nochmals kurz gehen lassen		
+		\step Die Brote drei- bis fünfmal mit flachgeführter Klinge schräg einschneiden
+		\step Im Ofen ca. 45 Minuten backen, danach gleich mit Wasser bestreichen
+	}
+	
+	
+\end{recipe}
+
+
+\newpage
+
+\begin{recipe}
+	[ 
+	preparationtime = {\unit[180]{min}},
+	bakingtime = {\unit[45]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+	portion,
+	calory
+	]
+	{Brioche}
+	
+	\graph
+	{
+		small=pictures/brioche/brioche.png
+	}
+	
+	\ingredients
+	{
+		\unit[200]{g} & Mehl \\
+		\unit[10]{g} & Hefe \\
+		\unit[1]{EL} & Zucker \\
+		\unit[0.5]{dl} & Milch \\
+		\unit[0.5]{TL} & Salz \\
+		\unit[75]{g} & Butter \\
+		1 & Ei \\
+		1 & Eigelb (zum Bestreichen)
+	}
+	
+	\preparation
+	{%
+		\step Mehl in eine Schüssel geben, eine Mulde eindrücken. Hefe, Zucker und Milch in der Mulde zu einem dünnen Brei anrühren, mit wenig Mehl bestreuen. Stehen lassen, bis der Brei schäumt.
+		\step Salz, Butter und Ei beigeben, mit einer Kelle oder dem Knethaken des Handrührgerätes zu einem weichen, glatten Teig kneten. Zugedeckt bei Raumtemperatur ca. 1Std. aufs Doppelte aufgehen lassen.
+		\step Teig in die gefettete Cakeform geben und nochmals ca. 30 Min. aufgehen lassen, dann mit Eigelb bestreichen.
+		\step ca. 45 Min. in der unteren Hälfte des auf 200 Grad vorgeheizten Ofens.Herausnehmen,leicht abkühlen, aus der Form nehmen,auf einem Gitter auskühlen.
+	}
+
+	\hint
+	{
+		Dazu passen: Käse, geräucherter Lachs.
+	}
+	
+	
+\end{recipe}
+
+\newpage
+
+\section{Hauptgerichte}
+
+\begin{recipe}
+[
+	preparationtime = {\unit[20]{min}},
+	bakingtime={\unit[5]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+	portion = {\portion{3-4}},
+	calory,
+	source
+]
+{Nachos mit Hackfleisch und K"ase}
+	\graph
+	{
+		big=pictures/nachos/nachos_large
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Hackfleisch \\
+		1 & Zwiebel \\
+		1 & Peperoni \\
+		1 & Paprika \\
+		\unit[1]{Glas} & Salsa Sauce \\
+		\unit[300]{g} & Nachos \\
+		\unit[1]{Pack} & Reibk"ase \\
+		\unit[1]{Pack} & Sauerrahm \\
+	}
+	
+	\preparation
+	{
+		\step Zwiebel, Peperoni und Paprika in kleine W"urfel schneiden.
+		\step Zwiebelst"ucke in Bratpfanne glasig anbraten.
+		\step Hackfleisch zugeben und \unit[5]{min} braten.
+		\step Peperoni und Paprika hinzugeben und weitere \unit[5]{min} d"unsten lassen.
+		\step Das ganze nach eigenem ermessen mit Salz, Pfeffer und je nach Gusto weiteren Gew"urzen verfeinern.
+		\step Die Salsa Sauce "uber das Fleischgemisch geben, gut verteilen und noch \unit[3-4]{min} kochen lassen.
+		\step In dieser Zeit die Nachos in einer Gratinform verteilen.
+		\step Das Fleisch "uber die Nachos geben und danach mit Reibk"ase "uberdecken
+		\step Das Ganze f"ur ca. \unit[5]{min} in den auf \unit[200]{°C} vorgeheizten Ofen schieben.
+		\step Sauerrahm klecksweise darauf geben und servieren
+	}
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+[
+	preparationtime = {\unit[40]{min}},
+	bakingtime={\unit[20]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+	portion = {\portion{4}},
+	calory,
+	source
+]
+{Lasagne}
+	\graph
+	{
+		small=pictures/lasagne/lasagne
+	}
+	
+	\ingredients
+	{
+		\unit[600-700]{g} & Hackfleisch gemischt \\
+		reichlich & Knoblauch \\
+		1 & Zwiebel gehackt \\
+		\unit[1-2]{W"urfel} & gebundene Bratensauce \\
+		\unit[2]{dl} & Rotwein \\
+		\unit[1]{B"uchse} & Pelati gehackt \\
+		\unit[5]{dl} & Weisse Sauce \\
+		\unit[1]{Pack} & Nudelteigbl"atter \\
+		\unit[1]{Pack} & Parmesan
+	}
+	
+	\preparation
+	{
+		\step Fleisch mit dem Zwiebeln und Knoblauch anbraten.
+		\step Mit der Bratensauce sowie dem Rotwein abl"oschen.
+		\step Reichlich W"urzen und die Pelati hinzugeben. Das Ganze mindestens \unit[30]{min} k"ocheln lassen.
+		\step Am Ende der Kochzeit die Sauce auf Sch"arfe probieren. Nach eigenem Gusto nochmals w"urzen.
+		\step Die Weisse Sauce aufkochen
+		\step Eine erste Lage Nudelteigbl"atter in die ausgebutterte Gratinform legen. Dar"uber dann eine Schicht Fleisch. Dies solange bis kein Fleisch mehr "ubrig ist. Die oberste Schicht sind wieder Nudelteigbl"atter.
+		\step Die Weisse Sauce "uber die Lasagne geben und danach mit Parmesan bestreuen
+		\step Lasagne f"ur ca. \unit[20]{min} in den auf \unit[200-220]{°C} vorgeheizten Ofen schieben.
+	}
+	
+	\hint
+	{
+		Empfohlene Gew"urze: Pfeffer, Paprika (scharf), Oregano \\
+		Die Weisse Sauce gibt es im Beutel zu kaufen (sind exakt \unit[5]{dl}) \\
+		Wer es k"asig mag kann den Parmesan auch auf alle Fleischchichten geben
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+[
+	preparationtime = {\unit[20]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{4}},
+	calory,
+	source
+]
+{Schweinefleisch S"uss-Sauer}
+
+	\graph
+	{
+		big=pictures/schweinefleisch_sweetsour/schweinefleisch_sweetsour
+	}
+	
+	\ingredients
+	{
+		\unit[160]{ml} & Pflanzen"ol \\
+		\unit[200-250]{g} & Schweinefleisch gew"urfelt\\
+		1 & Zwiebel \\
+		1 & Paprika \\
+		\unit[225]{g} & Ananasst"ucke \\
+		1 & Karotte \\
+		\unit[25]{g} & Bambussprossen \\
+		& gekochter Reis \\
+		\\
+		\multicolumn{2}{c}{\textbf{Sauce}}\\
+		\unit[110]{g} & brauner Zucker \\
+		\unit[2]{EL} & Speisest"arke \\
+		\unit[120]{ml} & Weissweinessig \\
+		2 & Knoblauchzehen \\
+		\unit[4]{EL} & Tomatenmark \\
+		\unit[90]{ml} & Ananassaft
+	}
+	
+	\preparation
+	{
+		\step Pflanzen"ol in einem Wok stark erhitzen. Die Fleischst"ucke im Wok anbraten. Danach herausnehmen und auf einem Teller warm halten.
+		\step Falls noch nicht gemacht, Zwiebel, Karotte sowie Paprika und Bambussprossen in kleine St"ucke schneiden.
+		\step Zwiebel, Paprika, Ananasst"ucke, Karotte sowie Bambussprossen 1-2 Minuten im Wok braten. Danach auch wieder herausnehmen und zusammen mit dem Fleisch warm halten.
+		\step Alle Zutaten f"ur die Sauce vermengen und gut r"uhren. Danach im Wok aufkochen bis die Masse klar und eingedickt ist.
+		\step Dann das Fleisch und Gem"use der Sauce hinzuf"ugen und noch \unit[1-2]{min} kochen.
+		\step Mit frischem Reis sofort servieren.
+	}
+	
+	\hint
+	{
+		Man kann anstatt Schweinefleisch auch gut Poulet verwenden
+	}
+\end{recipe}
+
+\newpage
+\begin{recipe}
+[
+	preparationtime = {\unit[20-30]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{4}},
+	calory,
+	source
+]
+{H"uhnchen-Reis-Pfanne}
+
+	\graph
+	{
+		big=pictures/huhn_reis_pfanne/huhn_reis_pfanne
+	}
+	
+	\ingredients
+	{
+		\unit[\nicefrac{1}{2}]{EL} & Erdnuss"ol \\
+		\unit[450]{g} & H"uhnerfleisch \\
+		\unit[3]{EL} & Sojasauce \\
+		2 & Karotten \\
+		1 & rote Paprika \\
+		\unit[175]{g} & Erbsen \\
+		\unit[100]{g} & Mais \\
+		\unit[300]{g} & Reis \\
+		2 & Eier
+	}
+	
+	\preparation
+	{
+		\step Das Fleisch, die Karotten und Paprika in W"urfel schneiden
+		\step Das "ol bei mittlerer Hitze im Wok erhitzen
+		\step Fleisch und \unit[2]{EL} Sojasauce zugeben und \unit[5-6]{min} braten
+		\step Karotten, Paprika, Erbsen und Mais zugeben und alles \unit[5]{min} unter R"uhren braten
+		\step Den Reis unterr"uhren und gut erhitzen
+		\step Die Eier verquirlen und zusammen mit der restlichen Sojasauce beigeben. Das ganze gut vermengen und dann sofort servieren
+	}
+	
+	\hint
+	{
+		Eignet sich auch gut zum aufw"armen in der Mikrowelle
+	}
+\end{recipe}	
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[15]{min}},
+	bakingtime={\unit[5]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[240]{°C}}},
+	portion = {\portion{4}},
+	calory,
+	source
+	]
+	{Knoblauchbrot}
+	\graph
+	{
+		big=pictures/knoblauchbrot/knoblauchbrot
+	}
+	
+	\ingredients
+	{
+		\unit[ca. 300]{g} & Pariserbrot \\
+		\unit[100]{g} & Butter, weich \\
+		4 & Knoblauchzehen \\
+		\unit[2]{EL} & Petersilie \\
+		\unit[1]{TL} & Paprika \\
+		\unit[1]{TL} & Curry \\
+		\unit[1]{TL} & Salz \\
+		\unit[0.25]{TL} & Cayennepfeffer 
+	}
+	
+	\preparation
+	{
+		\step Brot halbieren, beide St"ucke quer halbieren
+		\step Butter und alle restlichen Zutaten mischen und gut verr"uhren
+		\step Paste auf die Brotscheiben streichen
+		\step Im auf \unit[240]{C} Grad vorgeheizten Ofen (nur Oberhitze) auf der obersten Rille f"ur \unit[5]{min} r"osten.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[25]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{2}},
+	calory={\unit[750]{kcal}},
+	source
+	]
+	{Fotzelschnitten}
+	\graph
+	{
+		small=pictures/fotzelschnitten/fotzelschnitten
+	}
+	
+	\ingredients
+	{
+		2.5 & Eier \\
+		Prise & Salz \\
+		\unit[2.5]{EL} & Rahm \\
+		\unit[300]{g} & Weiss- oder Ruchbrot \\
+		\unit[1]{dl} & Milch \\
+		\unit[1]{EL} & Zimt \\
+		\unit[3.5]{EL} & Zucker 
+	}
+	
+	\preparation
+	{
+		\step Eier verquirlen, Salz und Rahm dazugeben
+		\step Brot in ca. \unit[1.5]{cm} dicke Scheiben schneiden und auf einem Blech auslegen
+		\step Brotscheiben mit etwas Milch betr"aufeln
+		\step Etwas Butter in einer Bratpfanne schmelzen
+		\step Brotscheiben durch die Eier-Rahm-Mischung ziehen
+		\step Portionenweise in der Butter bei mittlerer Hitze beidseitig braten
+		\step Zimt und Zucker mischen und die Fotzelschnitten darin wenden
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[25]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{2}},
+	calory=
+	source
+	]
+	{French Toast}
+	\graph
+	{
+		big=pictures/frenchtoast/frenchtoast
+	}
+	
+	\ingredients
+	{
+		3 & Eier \\
+		\unit[3]{EL} & Zucker \\
+		\unit[1]{TL} & Zimt \\
+		\unit[2]{dl} & Milch \\
+		6 & Toastscheiben \\
+		Prise & Salz \\
+		& Butter \\
+		& Banane \\
+		& Ahornsirup \\
+		& Walnüsse \\
+		& Nutella
+	}
+	
+	\preparation
+	{
+		\step Eier in einer Auflaufform aufschlagen
+		\step Zucker, Zimt und Milch hinzugeben und verru"hren
+		\step Toastscheiben in Flu"ssigkeit einlegen bis sie sich vollgesogen haben
+		\step Butter in Pfanne erhitzen, Toast von beiden Seiten ca. 5 Minuten anbraten
+		\step Toast mit Toppings belegen
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[20]{min}},
+	bakingtime={\unit[12]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{2}},
+	calory,
+	source
+	]
+	{Kaiserschmarrn mit Apfelmus}
+	\graph
+	{
+		big=pictures/kaiserschmarrn/kaiserschmarrn.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[40]{g} & Butter \\
+		\unit[4]{St"uck} & Eier \\
+		\unit[200]{g} & Mehl \\
+		\unit[300]{ml} & Milch \\
+		\unit[30]{g} & Mandelsplitter \\
+		\unit[1]{Prise} & Salz \\
+		\unit[1]{Prise} & Puderzucker \\
+		\unit[30]{g} & Zucker \\
+		\unit[1]{B"uchse} & Apfelmus \\
+	}
+	
+	\preparation
+	{
+		\step In einer Sch"ussel Mehl, Zucker, Salz und Eigelb mit der Milch zu einem glatten, dickfl"ussigen Teig verr"uhren.
+		\step In einer anderen Sch"ussel das Eiweiss zu einem steifen Schnee schlagen und danach unter den Teig heben.
+		\step Butter in einer grossen, flachen Pfanne aufsch"aumen lassen. Den Teig langsam eingiessen und auf beiden Seiten anbacken.
+		\step Pfanne in den vorgeheizten Ofen f"ur 10-12 Minuten backen.
+		\step Pfanne aus dem Ofen nehmen, Teig in kleine St"ucke zerreißen. Mandeln hinzugeben und nochmals f"ur 1 Minute in den Ofen.	
+		\step Auf Tellern mit etwas Apfelmus anrichten	
+	}
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+		portion = {\portion{2}},
+	calory = {\unit[250]{kcal}},
+	source
+	]
+	{Wok-Gem"use}
+	\graph
+	{
+		small=pictures/wok_gemuese/wok_gemuese.png
+	}
+	
+	\ingredients
+	{
+		\unit[200]{g} & R"uebli \\
+		1 & Rote Paprika \\
+		1 & Gelbe Paprika \\
+		\unit[350]{g} & Brocooli \\
+		1 & Knoblauchzehe \\
+		\unit[1]{Prise} & Salz \\
+		\unit[1]{dl} & Orangensaft \\
+		\unit[5]{EL} & Sojasauce \\
+		\unit[2]{EL} & "Ol \\
+	}
+	
+	\preparation
+	{
+		\step R"uebli in scheiben schneiden. Paprika in Streifen schneiden. Broccoli in R"oschen teilen.
+		\step R"uebli, Paprika und Broccoli nacheinander in kochendem Salzwasser 2 Min. vorgaren.
+		\step "Ol im Wok erhitzen, Paprikastreifen unter r"uehren 3 Min. braten.
+		\step Knoblauch pressen und hinzu geben und 30-60 Sekunden braten.
+		\step Mit Orangensaft und Sojasauce abl"oschen.
+		\step R"uebli und Broccoli dazugeben und zugedeckt 2-3 Minuten garen lassen.	
+		\step Etwas Salzen und Pfeffern.
+	}
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[75]{min}},
+	bakingtime={\unit[60]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[170]{°C}}},
+	portion = {\portion{4}},
+	calory,
+	source
+	]
+	{K"ase-Speck Folienkartoffeln}
+	\graph
+	{
+		big=pictures/folienkartoffeln/folienkartoffeln.png
+	}
+	
+	\ingredients
+	{
+		4 & grosse Kartoffeln (mehligkochend) \\
+		\unit[100]{g} & Greyerzer K"ase (in Scheiben geschnitten) \\
+		10 & Tranchen Bratspeck (quer halbiert) \\
+		\unit[1]{TL} & Oliven"ol \\
+		\unit[200]{g} & Magerquark \\
+		\unit[5]{g} & Schnittlauch \\
+		& Diverse Kr"auter/Gew"urze \\
+		1/2 & Zitrone (nur Saft) \\
+	}
+	
+	\preparation
+	{
+		\step \textbf{Kartoffeln}
+		\step Kartoffeln in F"acher schneiden.
+		\step Abwechslungsweise K"ase und Speck in F"acher legen.
+		\step Mi "Ol betr"aufeln und mit Kr"autern w"urzen.
+		\step Kartoffeln gut in Alufolie einwickeln
+		\step ca. 1 Stunde bei \unit[170]{°C} garen.
+		\step \textbf{Sauce}
+		\step Quark mit Schnittlauch und Zitronensaft gut vermischen.
+		\step Mit Salz und Pfeffer abschmecken.
+	}
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{12}},
+	calory,
+	source
+	]
+	{Omeletten}
+	\graph
+	{
+		big=pictures/omeletten/omeletten.png
+	}
+	
+	\ingredients
+	{
+		1/2 Teel"offel & Salz \\
+		\unit[200]{g} & Mehl \\
+		\unit[2]{dl} & Milch \\
+		\unit[2]{dl} & Wasser \\
+		4 & frische Eier \\
+	}
+	
+	\preparation
+	{
+		\step \textbf{Teig}
+		\step Mehl und Salz in einer Sch"ussel mischen, in der Mitte eine Mulde bilden.
+		\step Milch, Wasser und Eier verr"uhren, nach und nach unter R"uhren mit dem Schwingbesen in die Mulde giessen.
+		\step R"uhren bis der Teig glatt ist.
+		\step Zugedeckt bei Raumtemperatur \unit[30]{min} quellen lassen.
+		\step \textbf{Backen}
+		\step Wenig "Ol in einer beschichteten Pfanne heiss werden lassen.
+		\step Teig in die Pfanne geben, Hitze reduzieren.
+		\step Sobald die Unterseite fertig gebacken ist l"ost sie sich von selbst, Omelette wenden und fertig backen.
+	}
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[15]{min}},
+	portion = {\portion{4}},
+	calory,
+	source
+	]
+	{Pancakes}
+	\graph
+	{
+		small=pictures/pancakes/pancakes.jpg
+	}
+	
+	\ingredients
+	{
+		2 & Eier \\
+		& Salz \\
+		\unit[1]{Pack} & Vanillezucker \\
+		\unit[1]{Pack} & Backpulver \\
+		\unit[1]{Fl"aschchen} & Vanillearoma \\
+		\unit[400]{g} & Mehl \\
+		\unit[410]{g} & Milch \\
+		& Butter \\
+		diverse & Toppings \\		
+	}
+	
+	\preparation
+	{
+		\step Eier trennen und Eiweiss mit einer Prise Salz steif schlagen.
+		\step Eigelb, Vanillezucker, Backpulver und Vanillearoma zusammen mit einer Prise Salz vermischen.
+		\step Mehl und Milch unterheben und r"uhren bis Teigmasse eine cremige Konsistenz hat.
+		\step Eiweiss unterheben.
+		\step Etwas Butter in Pfanne schmelzen und Pancake ausbacken.
+		\step Zusammen mit Toppings servieren.
+	}
+	\hint
+	{
+		Als Toppings geeignet sind diverse Fr"uchte wie Blau- oder Erdbeeren zusammen mit Nutella, Ahornsirup oder Mascarpone.
+	}
+	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{4}},
+	calory,
+	source
+	]
+	{Poulet-Satay Spiesse mit Erdnusssauce}
+	\graph
+	{
+		small=pictures/poulet_satay_spiess/poulet_satay_spiess.jpg
+	}
+	
+	\ingredients
+	{
+		4 & Pouletbr"ustchen \\
+		& Holzspiesschen \\
+		1 Prise & Salz \\
+		4 Portionen & Reis \\
+		& \textbf{Marinade} \\
+		\unit[2]{EL} & Sojasauce \\
+		\unit[1]{EL} & Erdnuss"ol \\
+		\unit[1]{EL} & Erdnussbutter \\
+		\unit[1]{EL} & Zitronensaft \\
+		&\textbf{Erdnusssauce} \\
+		\unit[2]{dl} & Kokosmilch \\
+		\unit[3-4]{EL} & Erdnussbutter \\
+		\unit[2]{EL} & Sojasacue \\
+	}
+	
+	\preparation
+	{
+		\step Pouletbr"ustli zwischen Klarsichtfolie legen, mit dem Boden einer Pfanne sorgf"altig ca. \unit[5]{mm} dick flach klopfen. Pouletbr"ustli l"angs vierteln, wellenf"ormig auf die Spiesse stecken.
+		\step \textbf{Marinade}: F"ur die Marinade Sojasauce und alle Zutaten gut verr"uhren.
+		\step Spiessli damit bestreichen, zugedeckt im K"uhlschrank ca. 2 Std. marinieren.
+		\step \textbf{Erdnusssauce}: Kokosmilch und alle Zutaten p"urieren, in einer kleinen Pfanne aufkochen, Hitze reduzieren, unter R"uhren ca. 10 Min. k"ocheln.
+		\step Spiesschen portionenweise beidseitig einige Minuten braten, etwas salzen.
+		\step Spiesse zusammen mit einer Portion Reis und der Erdnusssauce servieren.
+	}	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[20]{min}},
+	bakingtime={\unit[60]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{4}},
+	calory,
+	source
+	]
+	{Kartoffelgratin}
+	\graph
+	{
+		small=pictures/kartoffelgratin/kartoffelgratin.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[800]{g} & mehlig kochende Kartoffeln \\
+		\unit[3]{dl} & Rahm \\
+		\unit[3]{dl} & Milch \\
+		1-2 & Knoblauchzehen \\
+		& Salz, Pfeffer, Muskatnuss \\
+		\unit[100]{g} & Reibk"ase \\
+	}
+	
+	\preparation
+	{
+		\step Kartoffeln waschen, sch"alen und in gleichm"assige Scheiben von 2-3 mm schneiden.
+		\step Karotffelscheiben in Gratinform schichten.
+		\step Milch, Rahm und nach belieben Knoblauch mischen und w"urzen.
+		\step Guss "uber die Kartoffeln giessen. Die Kartoffeln sollten dabei ganz bedeckt sein.
+		\step Auf der untersten Rille des auf \unit[180]{C} vorgeheizten Ofens ca. \unit[40-50]{min} backen.
+		\step K"ase auf Gratin verteilen, Ofentemperatur auf \unit[220]{C} erh"ohen und in der oberen H"alfte des Ofens ca. \unit[10]{min} "uberbacken.
+	}
+	\hint
+	{
+		Falls festkochende Kartoffeln verwendet werden, kann die Fl"ussigkeit um 1-2 dl verringert werden.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[45]{min}},
+	bakingtime={\unit[20]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[220]{°C}}},
+	portion = {\portion{4}},
+	calory,
+	source
+	]
+	{Bolognese-Gratin}
+	\graph
+	{
+		big=pictures/bolognese-gratin/bolognese-gratin.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[250-300]{g} & Teigwaren \\
+		\unit[500]{g} & Hackfleisch \\
+		\unit[200]{g} & R"uebli, gerieben \\
+		1 & Knoblauchzehe \\
+		\unit[100]{g} & Tomatenp"ure \\
+		\unit[1]{dl} & Rahm \\
+		& Salz, Pfeffer, Paprika \\
+		& Reibk"ase \\
+	}
+	
+	\preparation
+	{
+		\step Teigwaren in reichlich Salzwasser al dente kochen, abgiessen. In die ausgebutterte Gratinform geben.
+		\step Fleisch in der heissen Bratbutter portionenweise rundum kr"aftig anbraten, beiseite stellen.
+		\step Gem"use, Zwiebel und Knoblauch in derselben Pfanne and"ampfen. Tomatenp"uree und Fleisch dazugeben, mischen. Mit Bouillon und Rahm abl"oschen, aufkochen, w"urzen.
+		\step Zugedeckt bei kleiner Hitze 25-30 Minuten schmoren.
+		\step Auf die Teigwaren in der Gratinform geben, nach Belieben mischen, flach streichen. Mit K"ase bestreuen.
+		\step In der Mitte des auf 220°C vorgeheizten Ofens 15-20 Minuten gratinieren.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[20]{min}},
+	bakingtime={\unit[30]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{3}},
+	calory,
+	source
+	]
+	{Baked Macaroni and Cheese}
+	\graph
+	{
+		small=pictures/maccheese/maccheese.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[250]{g} & Makkaroni \\
+		\unit[75]{g} & Butter \\
+		\unit[2]{EL} & Mehl \\
+		\unit[4]{dl} & Milch \\
+		\unit[200]{g} & Cheddar, gerieben \\
+		\unit[2]{EL} & Parmesan \\
+		& Salz, Cayennepfeffer, Senf \\
+		& Paniermehl \\
+	}
+	
+	\preparation
+	{
+		\step Die Nudeln nach Packungsanweisung al dente kochen.
+		\step W"ahrenddessen die Butter in einer Pfanne schmelzen.
+		\step Das Mehl hineinr"uhren, nach und nach unter R"uhren die Milch hinzuf"ugen. 4-5 Minuten k"ocheln lassen bis die Sauce dicker wird.
+		\step Den K"ase hinzuf"ugen und r"uhren bis er geschmolzen ist. Mit Salz, Senf und Cayennepfeffer abschmecken.
+		\step Die Nudeln mit der Sauce mischen und alles in eine gefettete Auflaufform geben.
+		\step Mit dem Paniermehl bestreuen, mit Butterfl"ockchen besetzen und den Auflauf 30 Minuten im Ofen backen.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[10]{min}},
+	bakingtime={\unit[35-40]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+	portion = {\portion{3}},
+	calory,
+	source
+	]
+	{Fleischw"ahe}
+	\graph
+	{
+		big=pictures/fleischwaehe/fleischwaehe.PNG
+	}
+	
+	\ingredients
+	{
+		1 & runder Kucherteig \\
+		\unit[2]{EL} & Paniermehl \\
+		1 & Knoblauchzehe \\
+		\unit[1]{EL} & Rosmarinnadeln \\
+		\unit[150]{g} & Mortadella \\
+		\unit[300]{g} & Hackfleisch \\
+		2 & Eier \\
+		\unit[3]{EL} & Marcarpone \\
+		\unit[1/2]{TL} & Salz \\
+		wenig & Pfeffer \\
+	}
+	
+	\preparation
+	{
+		\step Teig mit Backpapier in W"ähenblech geben. Dicht einstechen und Paniermehl darauf verteilen.
+		\step Koblauch pressen und Mortadella klein schneiden.
+		\step Koblauch, Rosmarin, Hackfleisch, Eier, Mascarpone und die H"alfte des Mortadellas in einer Sch"ussel vermischen und w"urzen.
+		\step Den K"ase hinzuf"ugen und r"uhren bis er geschmolzen ist. Mit Salz, Senf und Cayennepfeffer abschmecken.
+		\step Auf den Teigboden verteilen und glatt streichen.
+		\step Bei 200° f"ur 20 Minuten in die untere H"alfte des Ofens.
+		\step Den restlichen Mortadella darauf verstreuen und nochmals f"ur ca. 15 Minuten fertig backen.
+	}
+	\hint
+	{
+		F"ur die restlichen 15 Minuten kann man zum Beispiel auch Speckw"urfel hinzugeben.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[35]{min}},
+	portion = {\portion{3}},
+	calory,
+	source
+	]
+	{"Alpermagronen}
+	\graph
+	{
+		small=pictures/aelplermagronen/aelplermagronen.jpg
+	}
+	
+	\ingredients
+	{
+		2 & Knoblauchzehen\\
+		\unit[400]{g} & festkochende Kartoffeln \\
+		\unit[150]{g} & Speckw"urfel \\
+		\unit[5]{dl} & Wasser \\
+		\unit[2]{dl} & Halbrahm \\
+		\unit[250]{g} & Teigwaren \\
+		\unit[60]{g} & Reibk"ase \\
+		& Salz und Pfeffer \\
+		& R"ostzwiebeln \\
+		& Apfelmus \\
+	}
+	
+	\preparation
+	{
+		\step Knoblauch in Scheiben, Kartoffeln in W"urfel schneiden.
+		\step Speck und Knoblauch in Bratpfanne anbraten.
+		\step Wasser und Rahm aufkochen.
+		\step Kartoffeln und Teigwaren dazu geben und ca. 10 Minuten kochen, bis die Fl"ussigkeit aufgesogen ist.
+		\step K"ase darunter mischen und w"urzen, Speck und Knoblauch dazu geben.
+		\step Mit Apfelmus und R"ostzwiebeln anrichten.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[70]{min}},
+	bakingtime={\unit[20]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[220]{°C}}},
+	portion = {\portion{3-4}},
+	calory,
+	source
+	]
+	{Pie mit Kalbfleisch}
+	\graph
+	{
+		big=pictures/beefpie/beefpie.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[800]{g} & geschnetzeltes Kalbfleisch \\
+		\unit[2]{EL} & Mehl \\
+		\unit[1]{Prise} & Salz \\
+		wenig & Pfeffer \\
+		\unit[1-2]{Zehen} & Knoblauch \\
+		1 & Karotte \\
+		\unit[1]{Pack} & Speckw"urfeli \\
+		\unit[2]{dl} & Fleischbouillon \\
+		\unit[2]{dl} & Vollrahm \\
+		& Schnittlauch \\
+		1-2 & Bl"atterteig (32cm) \\
+		1 & Ei \\
+	}
+	
+	\preparation
+	{
+		\step Fleisch ca. 3 Minuten anbraten, mit wenig Mehl best"auben, herausnehmen und mit Salz und Pfeffer w"urzen.
+		\step Speck, gehackte Karotte und Knoblauch anbraten.
+		\step Bouillon und Rahm dazugiessen und aufkochen.
+		\step Fleisch dazugeben und bei kleiner Hitze ca. 50-60 Minuten zugedeckt schmoren.
+		\step In der zwischenzeit Bl"atterteig einstechen und in Form geben.
+		\step Wenn sich die Fl"ussigkeit gen"ugend reduziert hat Schnittlauch dazu geben und auf den Bl"atterteig geben.
+		\step Restlichen Bl"atterteig einstechen und auf Fleisch geben. Mit innerem Teig fest zusammendr"ucken und grossz"ugig mit Ei bestreichen.
+		\step F"ur 20 Minuten in den Ofen.
+	}
+
+	\hint
+	{
+		Man kann auch nur einen Bl"atterteig zum abdecken verwenden und das Fleisch direkt in die Form geben.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[25]{min}},
+	bakingtime={\unit[5]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[240]{°C}}},
+	portion = {\portion{2-3}},
+	calory,
+	source
+	]
+	{Hackfleischpfanne mit Ofenkartoffeln}
+	\graph
+	{
+		small=pictures/hackfleischpfanne/hackfleischpfanne.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Hackfleisch \\
+		4 & grosse Kartoffeln \\
+		\unit[3]{dl} & Creme Fraiche \\
+		2 & Karotten \\
+		4 & Knoblauchzehen \\
+		\unit[6]{EL} & Worcestersauce \\
+		4-6 Tranchen & Speck \\
+		& Rosmarin \\
+		& Petersilie \\
+		& Thymian \\
+		& Oliven"ol \\
+	}
+	
+	\preparation
+	{
+		\step Kartoffeln waschen, von schadhaften Stellen befreien und mit einem Messer etwas einstechen. In eine grosse, Mikrowellentaugliche Sch"ussel stellen, doppelt mit Frischhaltefolie abdecken und bei 600-800 Watt ca. 14-16 Minuten weich garen.
+		\step Hackfleisch in einer Pfanne zerteilen. Mit etwas Salz und Pfeffer w"urzen und Oliven"ol dazu geben. Etwas Thymian dazugeben und unter R"uhren anbraten.
+		\step Den Speck in kleine Streifen schneiden und in einer Pfanne etwas anbraten.
+		\step Die Karotten in kleine St"ucke schneiden.
+		\step Rosmarin, gepressten Knoblauch und Worcestersauce zum Fleisch geben. Gut verr"uhren und weitergaren, bis alles mit Sauce "ubergl"anzt ist. Dann die Karotten und den Speck dazu geben.
+		\step Sobald Kartoffeln gar sind mit Salz und Pfeffer w"urzen und etwas Oliven"ol "ubergiessen. Danach f"ur ca 5 Minuten in den Ofen bis sie goldgelb sind.
+		\step Etwas Petersilie "uber das Hackfleisch geben und verr"uhren. Die Kartoffeln aus dem Ofen nehmen und kreuzweise einschneiden. Mit Creme Fraiche und Petersilie servieren.
+	}	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	portion = {\portion{2-3}},
+	calory,
+	source
+	]
+	{Sloppy Joe}
+	\graph
+	{
+		big=pictures/sloppy_joe/sloppy_joe.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Hackfleisch \\
+		4-6 Tranchen & Speck \\
+		2 & Paprikaschoten \\
+		1-2 & Knoblauchzehen \\
+		\unit[1-2]{EL} & Worcestersauce \\
+		\unit[40]{ml} & Wasser \\
+		\unit[240]{ml} & Ketchup \\
+		& Salz und Pfeffer \\
+		4 & Hamburgerbr"otchen \\
+	}
+	
+	\preparation
+	{
+		\step Paprika in kleine W"urfel schneiden. Knoblauch klein schneiden oder pressen und zu Paprika geben. Specktranchen in kleine St"ucke schneiden.
+		\step Hackfleisch ohne Zugabe von "Ol in einer Pfanne anbraten bis es braun wird.
+		\step Den Speck dazugeben.
+		\step Die Paprikaw"urfel mit dem Knoblauch hinzugeben. Danach das Wasser mit dem Ketchup hineingeben und gut vermischen.
+		\step Jetzt die Masse mit der Worcestersauce, dem Salz und Pfeffer w"urzen.
+		\step Das Ganze etwa 20-25 Minuten ohne Deckel k"ocheln lassen bis sich die Fl"ussigkeit deutlich reduziert hat.
+		\step Das Hackfleisch auf lauwarmen Hamburgerbr"otchen zusammen mit zum Beispiel Pommes servieren.
+	}	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime={\unit[20]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{3}},
+	calory,
+	source
+	]
+	{Enchilada de Pollo}
+	\graph
+	{
+		small=pictures/enchillada/enchillada.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Pouletbrust \\
+		6 & Tortillas \\
+		2 & Knoblauchzehen \\
+		1 & Paprika \\
+		1 & Chilischote \\
+		\unit[500-600]{g} & passierte Tomaten \\
+		\unit[4]{EL} & Creme Fraiche \\
+		& Reibkäse \\
+		& Salz, Pfeffer, Paprikapulver \\
+		& Basilikum \\
+	}
+	
+	\preparation
+	{
+		\step Poulet klein schneiden, mit Salz und Pfeffer w"urzen und in "Ol anbraten.
+		\step Paprika, Knoblauch und Chilischote klein schneiden.
+		\step Poulet aus der Pfanne nehmen und beiseite stellen und das Gem"use in der Pfanne anbraten.
+		\step In der Zwischenzeit das Poulet von Hand auseinander zupfen.
+		\step Dann das Fleisch wieder in die Pfanne geben, kurz verr"uhren und 100-200g passierte Tomaten dazu geben und w"ahrend 10 Minuten k"ocheln lassen.
+		\step F"ur die Sauce eine Knoblauchzehe klein schneiden und in etwas "Ol anbraten. 400g passierte Tomaten dazu geben und 5 Minuten k"ocheln lassen.
+		\step Sauce danach mit etwas Salz, Pfeffer und Basilikum abschmecken.
+		\step Zum Fleisch kann nach 10 Minuten die Creme Fraiche hinzugegeben werden. Danach mit Salz, Pfeffer und Paprikapulver abschmecken.
+		\step F"ullung auf die Tortillas geben, zusammenrollen und in eine Gratinform legen. Die Sauce dar"uber geben und das ganze mit Reibk"ase "uberdecken. Bei 180 Grad f"ur 20 Minuten "uberbacken.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[12]{h}},
+	bakingtime={\unit[60]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{3}},
+	calory,
+	source
+	]
+	{Boston Baked Beans}
+	\graph
+	{
+		small=pictures/bakedbeans/bakedbeans.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Bohnen (Kidney und Weisse gemischt) \\
+		4 Tranchen & Speck \\
+		2 & Knoblauchzehen \\
+		\unit[0.5]{dl} & Ahornsirup \\
+		\unit[0.5]{dl} & Ketchup \\
+		\unit[1]{TL} & s"usser Senf \\
+		\unit[1/4]{TL} & Ingwerpulver \\
+		\unit[1]{EL} & brauner Zucker \\
+		& Salz, Pfeffer \\
+	}
+	
+	\preparation
+	{
+		\step Bohnen "uber Nacht in Wasser einweichen lassen. Wasser abgiessen und Bohnen absp"ulen.
+		\step Ca. 1 Stunde bei mässiger Hitze kochen.
+		\step Speck w"urfeln und in einer Pfanne auslassen, Knoblauch dazugeben.
+		\step Bohnen in feuerfeste Form geben, Speck, Knoblauch und alle andere Zutaten ausser Salz dazugeben und gut mischen.
+		\step Falls es mehr Sauce braucht, etwas Wasser dazugeben.
+		\step Form abdecken und f"ur 30 Minuten in den Ofen.
+		\step Deckel entfernen, eventuell noch etwas Wasser hinzuf"ugen. Weitere 30-40 Minuten garen lassen.
+		\step Abschmecken und salzen. Heiss servieren.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime={\unit[10]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{3}},
+	calory,
+	source
+	]
+	{Breakfast Hash}
+	\graph
+	{
+		small=pictures/breakfasthash/breakfasthash.jpg
+	}
+	
+	\ingredients
+	{
+		& Kartoffeln \\
+		1 Pack & Speckwürfeli \\
+		1-2 & Paprikas \\
+		2 & Wienerli \\
+		3 & Eier \\
+		1 & Knoblauchzehe \\
+		& Rosmarin \\
+		& Thymian \\
+		& Petersilie \\
+		& Schnittlauch \\
+	}
+	
+	\preparation
+	{
+		\step Kartoffeln würfeln und in Schale geben, mit etwas Öl beträufeln und für 5 Minuten in die Mikrowelle geben
+		\step Paprika in würfeln schneiden
+		\step Knoblauch pressen und in etwas Öl anbraten
+		\step Wienerli würfeln und zusammen mit Speck zum Knoblauch geben und etwas anbraten
+		\step Paprikawürfel dazu geben und andünsten
+		\step Nun alles aus der Pfanne in ein Gefäss geben und die Kartoffeln etwas anbraten
+		\step Danach alles wieder zurück in die Pfanne geben und mit Rosmarin, Thymian, Petersilie und Schnittlauch würzen und gut mischen
+		\step Die Eier darüber geben und danach die ganze Pfanne für ca. 10 Minuten in den Ofen
+	}
+\end{recipe}
+\newpage
+
+\begin{recipe}
+	[
+	preparationtime = {\unit[2]{h}},
+	portion = {\portion{2}},
+	calory,
+	source
+	]
+	{Indisches Curry}
+	\graph
+	{
+		small=pictures/curry/curry.jpg
+	}
+	
+	\ingredients
+	{
+		400-500g & Fleisch \\
+		& Chillipulver \\
+		& Indisches Schärfegewürz \\
+		& Kurkuma \\
+		3-4 & Kartoffeln \\
+		1 & Ingwerwurzel \\
+		1 & Zwiebel \\
+		2 & grüne Chillis \\
+		4-6 & Knoblauchzehen \\
+		& Basmatireis \\
+	}
+	
+	\preparation
+	{
+		\step Fleisch in Würfel schneiden und in eine Pfanne legen
+		\step Ein Esslöffel Chillipulver, einen halben Löffel Schärfegewürz und einen Viertel Kurkuma über das Fleisch geben
+		\step Etwas Öl und wenig Wasser dazu geben und Fleisch marinieren. Für ca. 45 Minuten ziehen lassen.
+		\step Ingwer schälen und klein schneiden, Chillis und Zwiebel klein schneiden, Knoblauchzehen schälen und etwas eindrücken und zum Fleisch geben
+		\step Etwas Wasser dazugeben und zum kochen bringen, danach die Hitze reduzieren und mit geschlossener Pfanne köcheln lassen.
+		\step Falls Poulet verwendet wurde, Kartoffeln klein schneiden und nach 20 Minuten mit etwas Salz zum Fleisch geben
+		\step Das Fleisch insgesamt 45-60 Minuten köcheln lassen
+		\step Etwas Basmatireis in einer separaten Pfanne zubereiten und zusammen servieren
+	}
+
+	\hint{
+		Man kann Poulet, Rind oder Schweinefleisch zur Zubereitung nehmen. Kartoffeln nur zusammen mit Poulet hinzugeben.
+		Anstatt Reis kann man es auch einfach mit Brot servieren.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+[
+preparationtime = {\unit[25]{min}},
+bakingtime = {\unit[25-30]{min}},
+bakingtemperature={\protect\bakingtemperature{fanoven=\unit[200]{°C}}},
+portion,
+calory,
+source
+]
+{K"urbis Tarte}
+
+\graph
+{
+	big=pictures/kuerbistarte/kuerbistarte.png
+}
+
+\ingredients
+{
+	\unit[300]{g} & Mehl \\
+	\unit[150]{g} & kalte Butter \\
+	1 & Ei \\
+	\unit[2]{EL} & eiskaltes Wasser \\		
+	\unit[600]{g} & Hokkaidok"urbis \\
+	\unit[2]{EL} & Oliven"ol \\
+	\unit[750]{g} & Hackfleisch (gemischt) \\
+	\unit[2-3]{EL} & Tomatenmark \\
+	& Reibk"ase (Cheddar, Gouda) \\
+	& Salz, Pfeffer, Zucker \\
+	& Thymian, Rosmarin
+}
+
+\preparation
+{
+	\step F"ur den Teig Mehl, Butter in St"uckchen, Ei, 1 Prise Salz und Wasser verr"uhren, dann mit den H"anden zu einem glatten Teig verkneten.
+	\step Mit den Fingern in eine Tarteform dr"ucken.
+	\step K"urbis waschen, vierteln, entkernen und Fruchtfleisch w"urfeln.
+	\step "Ol erhitzen, Hack darin kr"umelig anbraten. Salz, Pfeffer und Kr"auter dazugeben.
+	\step Tomatenmark unterr"uhren und kurz anschwitzen. Mit Wasser abl"oschen. Mit Zucker abschmecken und kurz k"ocheln lassen.
+	\step Zuerst eine Schicht K"urbis auf den Boden legen, dann Hack dar"uber verteilen. Restlichen K"urbis dar"uber geben. Mit K"ase bestreuen.
+	\step Bei 200 Grad f"ur 25-30 Minuten backen.
+}
+\hint
+{
+	Man kann den M"urbeteig auch fertig kaufen.
+}
+\end{recipe}
+\newpage
+\section{Slow Food}
+\begin{recipe}
+	[
+	preparationtime = {\unit[10]{min}},
+	bakingtime={\unit[8-9]{h}},
+	bakingtemperature=,
+	portion = 2,
+	calory,
+	source
+	]
+	{BBQ Pulled Pork}
+	\graph
+	{
+		big=pictures/bbqpulledpork/bbqpulledpork.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500-600]{g} & Schweinefleisch \\
+		etwas & Senf \\
+		4 & Burger Buns \\
+		\unit[1]{dl} & Apfelsaft \\
+		\unit[2]{EL} & Honig \\
+		\unit[2]{EL} & brauner Zucker \\
+		\multicolumn{2}{c}{\textbf{Rub}} \\
+		\unit[TL]{1} & Salz, Pfeffer und Paprika \\
+		\unit[TL]{1/2} & Knoblauch  \\
+		\unit[TL]{1/2} & Cayennepfeffer \\
+		\multicolumn{2}{c}{\textbf{Sauce}}\\
+		nach Gef"uhl & BBQ Sauce \\
+		\unit[1]{dl} & Apfelsaft \\
+		\unit[2]{EL} & Honig \\
+	}
+	
+	\preparation
+	{
+		\step Fleisch rundherum mit Senf bestreichen.
+		\step Alle Gew"urze f"ur den Rub mischen und Fleisch rundherum damit bestreuen.
+		\step Ca. 1 Stunde ruhen lassen.
+		\step Apfelsaft, Honig und braunen Zucker mischen und zum Fleisch geben.
+		\step F"ur 7-8h in den Slow-Cooker geben und auf Low garen.
+		\step Fleisch heraus nehmen und mit 2 Gabeln auseinanderpfl"ucken. Zutaten f"ur Sauce mischen, zum Fleisch geben und auf Burger Buns verteilen.
+	}
+\end{recipe}
+\newpage
+
+\begin{recipe}
+	[
+	preparationtime = {\unit[10]{min}},
+	bakingtime={\unit[4-5]{h}},
+	bakingtemperature,
+	portion,
+	calory,
+	source
+	]
+	{BBQ Chicken Wings}
+	\graph
+	{
+		big=pictures/bbqchickenwings/bbqchickenwings.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[300-400]{g}& Chicken Wings \\
+		\\
+		\multicolumn{2}{c}{\textbf{Marinade}}\\
+		\unit[1]{EL} & Honig \\
+		\unit[2.5]{dl} & BBQ Sauce \\
+		1-2 & Knoblauchzehe \\
+		\unit[1]{TL} & Pfeffer \\
+		\unit[1]{TL} & Paprika \\
+		\unit[1]{TL} & Cayennepfeffer \\
+		\unit[1]{TL} & Salz \\
+		\unit[1]{EL} & Senf\\		
+	}
+	
+	\preparation
+	{
+		\step Zutaten f"ur Marinade gut mischen.
+		\step Chicken Wings in Plastiksack zusammen mit Marinade im K"uhlschrank f"ur 12-24h einziehen lassen.
+		\step 2h bei hoher Temperatur garen, danach weitere 2h bei niedriger Temperatur.
+		\step Falls knusprig gew"unscht, nach Ende der Garzeit kurz bei hoher Temperatur in den Ofen.
+		\step Zusammen mit Pommes Frites oder "ahnlichen servieren.
+	}
+	\hint
+	{
+		Falls mehr Wings zubereitet werden, entsprechend mehr Marinade zubereiten.
+	}
+\end{recipe}
+\newpage
+
+\begin{recipe}
+	[
+	preparationtime = {\unit[10]{min}},
+	bakingtime={\unit[6-7]{h}},
+	bakingtemperature,
+	portion=2,
+	calory,
+	source
+	]
+	{Pulled Chicken}
+	\graph
+	{
+		small=pictures/pulledchicken/pulledchicken.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[2]{St"uck}& Puletbrust \\
+		\\
+		\multicolumn{2}{c}{\textbf{Sauce}}\\
+		\unit[1]{dl} & Ketchup \\
+		\unit[0.5]{dl} & Ahornsirup \\
+		\unit[1]{EL} & Senf \\
+		\unit[1]{EL} & BBQ Sauce \\
+		\unit[1]{TL} & Zitronensaft \\
+		& Knoblauchpulver, Paprik, Cayennepfeffer \\
+		\\
+		4 & Hamburger Buns
+	}
+	
+	\preparation
+	{
+		\step Fleisch in Slow Cooker geben.
+		\step Zutaten f"ur Sauce in einer Sch"ussel glatt r"uhren, die H"alfte "ubers Fleisch geben, den Rest k"uhl stellen
+		\step F"ur 6h auf LOW garen.
+		\step Das Fleisch mit 2 Gabeln zerteilen. Mit etwas Sauce nochmal f"ur 30-60 Minuten garen.
+		\step Auf Hamburger Buns anrichten.
+	}
+\end{recipe}
+\newpage
+\section{Desserts}
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime={\unit[12-15]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{°C}}},
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Chocolate Chip Cookies}
+	
+	\graph
+	{
+		big=pictures/cookies/cookies
+	}
+	
+	\ingredients
+	{
+		\unit[250]{g} & Butter \\
+		\unit[200]{g} & Rohrzucker \\
+		\unit[175]{g} & Zucker \\
+		\unit[1]{TL} & Vanille Aroma (1/2 Fl"aschchen) \\
+		\unit[375]{g} & Mehl \\		
+		2 & Eier \\
+		\unit[2]{TL} & Backpulver \\
+		\unit[300]{g} & Schokolade gehackt \\
+		\unit[200]{g} & N"usse gehackt \\
+	}
+	
+	\preparation
+	{
+		\step Butter mit Zucker cremig schlagen
+		\step Vanillearoma und Eier darunter r"uhren
+		\step In separater Sch"ussel Mehl und Backpulver mischen und in die Buttermasse einr"uhren
+		\step Schokost"ucke und N"usse unterheben
+		\step Teig mit einem Essl"offel auf ein mit Backpapier ausgelegtes Blech verteilen
+		\step 12 Minuten Backen (f"ur krosse Cookies 15 Minuten)
+		\step 5 Minuten auf Blech ruhen lassen, dann auf Kuchengitten ausk"uhlen lassen
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+[
+	preparationtime = {\unit[30]{min}},
+	bakingtime={\unit[40]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{4}},
+	calory,
+	source
+]
+{Zitronenkuchen}
+
+	\graph
+	{
+		small=pictures/zitronenkuchen/zitronenkuchen
+	}
+	
+	\ingredients
+	{
+		\unit[200]{g} & Butter \\
+		\unit[200]{g} & Zucker \\
+		\unit[1]{Prise} & Salz \\
+		4 & Eier \\
+		2 & Zitronen (Schale und Saft)\\
+		\unit[250]{g} & Mehl \\
+		\unit[1]{TL} & Backpulver
+	}
+	
+	\preparation
+	{
+		\step Butter in einer Sch"ussel gut verr"uhren bis sich Spitzchen bilden
+		\step Zucker und Salz gut darunter r"uhren
+		\step Nach und nach die Eier beif"ugen. Solange r"uhren bis die Masse heller wird
+		\step Abgeriebene Zitronenschale und \unit[1]{EL} Saft darunter r"uhren
+		\step Mehl und Backpulver unter mischen
+		\step Masse in die gefettete Cakeform geben und im auf \unit[180]{°C} vorgeheizten Ofen \unit[40]{min} backen
+		\step Wenn der Kuchen fertig gebacken ist aus dem Ofen nehmen, \unit[10]{min} ausk"uhlen lassen und dann aus der Form nehmen
+	}
+	
+	\hint
+	{
+		Butter in kleine St"ucke schneiden bevor man sie verr"uhrt \\
+		Anstatt Zitronen k"onnen auch Orangen genommen werden
+	}
+\end{recipe}
+
+\newpage
+\begin{recipe}
+[
+	preparationtime = {\unit[75]{min}},
+	bakingtime={\unit[50-60]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{°C}}},
+	portion = {\portion{6}},
+	calory,
+	source
+]
+{Erdbeer-Cheesecake American Style}
+
+	\graph
+	{
+		big=pictures/cheesecake/cheesecake
+	}
+	
+	\ingredients
+	{
+		\multicolumn{2}{c}{\textbf{Tortenboden}}\\
+		\unit[150]{g} & Butterkekse\\
+		\unit[25]{g} & Zucker \\
+		\unit[75]{g} & Butter \\
+		\unit[\nicefrac{1}{4}]{TL} & Zimt \\
+		\multicolumn{2}{c}{}\\
+		\multicolumn{2}{c}{\textbf{F"ullung}}\\
+		\unit[450]{g} & Frischk"ase \\
+		\unit[200]{g} & Mascarpone \\
+		\unit[140]{g} & Zucker \\
+		\unit[2]{Pck} & Vanillezucker \\
+		\unit[15]{g} & Speisest"arke \\
+		4 & Eier \\
+		\nicefrac{1}{2} & Zitrone \\
+		1 Prise & Salz \\
+		\unit[100]{g} & Créme fraîche \\
+		\multicolumn{2}{c}{}\\
+		\multicolumn{2}{c}{\textbf{Glasur}}\\
+		3 Bl"atter & Gelatine \\
+		\unit[500]{g} & Erdbeeren \\
+		\unit[30]{ml} & Erdbeersaft \\
+		\unit[50]{g} & Zucker
+	}
+	
+	\preparation
+	{
+		\step \textbf{Tortenboden}\\
+		Den Ofen auf \unit[175]{°C} vorheizen. Die Butterkekse zerkr"umeln. Parallel die Butter schmelzen lassen (am besten in Pfanne auf kleiner Stufe). Sobald die Kekse zerkleinert sind, die geschmolzene Butter sowie den Zucker und Zimt dazugeben und gut vermischen. Das ganze in eine gefettete Springform geben und fest andr"ucken. Nach \unit[10]{min} herausnehmen und ausk"uhlen lassen.
+		\step \textbf{F"ullung} \\
+		Den Frischk"ase mit Zucker und Vanillezucker r"uhren bis der Zucker sich gel"ost hat. Dann Mascarpone und Speisest"arke unterr"uhren. Nach und nach die Eier beigeben. Danach zuerst die Schale der halben Zitrone, und danach \unit[15]{ml} Saft beigeben. Zum Schluss eine Prise Salz beif"ugen.
+		\step Die Creme auf dem Tortenboden verteilen. Das Ganze wieder bei \unit[175]{°C} im unteren Teil des Ofens \unit[50]{min} backen. Dann \unit[60]{min} im abgeschalteten Ofen ruhen lassen. Danach herausnehmen und ausk"uhlen lassen.
+		\step Créme fraîche auf den Kuchen streichen. Danach im K"uhlschrank etwas fest werden lassen (ca. \unit[1-2]{h}). \newpage
+		\step \textbf{Glasur}\\
+		Gelatine in warmen Wasser etwas einweichen lassen. Die Erdbeeren klein schneiden und die H"alfte zur"uckbehalten. Die andere H"alfte zusammen mit dem Saft und dem Zucker ca. \unit[3]{min}  lang kochen. Dabei st"andig r"uhren. Danach mit einem P"urierstab p"urieren und abk"uhlen lassen. Die restlichen Erdbeeren hinzuf"ugen. Dann die Gelatine aufl"osen und beif"ugen. Die ganze Masse kann dann "uber den Kuchen verteilt werden. Danach im K"uhlschrank fest werden lassen.
+	}
+	
+	\hint
+	{
+		Anstatt den Boden mit Butterkekskr"umeln zu machen, kann auch ein normaler M"urbeteig verwendet werden. \\
+		Wenn kein Erdbeersaft vorhanden ist kann man stattdessen auch normalen Erdbeersirup verwenden.\\
+		Anstatt Erdbeeren sind auch Cakes mit anderen Fr"uchten m"oglich.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[11]{h}},
+	bakingtime={\unit[60]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{°C}}},
+	portion = {\portion{10}},
+	calory,
+	source
+	]
+	{Choclate Cheesecake mit Oreo-Boden}
+	
+	\graph
+	{
+		small=pictures/choclate_cheesecake/choclate_cheesecake
+	}
+	
+	\ingredients
+	{
+		\multicolumn{2}{c}{\textbf{Boden}}\\
+		\unit 30 & Oreos\\
+		\unit[70]{g} & Butter\\
+		\multicolumn{2}{c}{}\\
+		\multicolumn{2}{c}{\textbf{F"ullung}}\\
+		\unit 4 & Eier \\
+		\unit[900]{g} & Mascarpone \\
+		\unit[150]{g} & Puderzucker \\
+		\unit[3]{EL} & Kakao \\
+		\unit[300]{g} & Schokolade \\
+		\unit[1]{P"ackchen} & Vanillezucker \\
+		\multicolumn{2}{c}{}\\
+		\multicolumn{2}{c}{\textbf{Glasur}}\\
+		\unit[200]{ml} & Rahm \\
+		\unit[180]{g} & Schokolade \\
+		\unit[3]{EL} & Zucker
+	}
+	
+	\preparation
+	{
+		\step \textbf{Tortenboden}\\
+		Den Ofen auf \unit[175]{°C} vorheizen. Die Oreos fein zerkr"umeln. Parallel die Butter schmelzen lassen (am besten in Pfanne auf kleiner Stufe). Sobald die Kekse zerkleinert sind, die geschmolzene Butter dazugeben und gut vermischen. Das ganze in eine gefettete Springform geben und fest andr"ucken. Nach \unit[8-10]{min} herausnehmen und ausk"uhlen lassen.
+		\step \textbf{F"ullung} \\
+		Die Schokolade schmelzen. Parallel dazu die Mascarpone in eine Sch"ussel geben und glatt r"uhren. Puderzucker, Vanillezucker und Kakao hinzugeben und danach die Eier nach und nach in die Masse r"uhren. Schokolade in die Masse geben und gut verr"uhren. Das ganze dann auf den Tortenboden geben und bei 175 Grad f"ur eine Stunde backen. Den Kuchen aus dem Ofen nehmen und etwas abk"uhlen lassen. Danach f"ur 8 Stunden im K"uhlschrank abk"uhlen lassen.
+		\step \textbf{Glasur}\\
+		Sahne kurz aufkochen. Dann die Schokolade und den Zucker hinzugeben und 2 Minuten ruhen lassen. Danach solange verr"uhren bis sich alles miteinander verbunden hat. \\
+		Sobald die Glasur etwas abgek"uhlt ist kann man Sie auf den Cheesecake geben und diesen nochmals f"ur 1-2 Stunden in den K"uhlschrank stellen.
+	}
+	
+	\hint
+	{
+		Statt 900g Marscarpone kann auch ein Teil Frischk"ase verwendet werden.
+	}
+\end{recipe}
+\newpage
+
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime={\unit[25]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[125]{°C}}},
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Schoko Walnuss Brownies}
+	
+	\graph
+	{
+		small=pictures/brownies/brownies.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[150]{g} & Butter \\
+		\unit[200]{g} & Schokolade, Zartbitter \\		
+		4 & Eier \\
+		\unit[1]{Prise} & Salz \\
+		\unit[220]{g} & Zucker \\
+		\unit[1]{Pack} & Vanillezucker \\
+		\unit[115]{g} & Mehl \\		
+		\unit[150]{g} & Waln"usse, gehackt \\
+	}
+	
+	\preparation
+	{
+		\step Butter und Schokolade zum schmelzen bringen und abk"uhlen lassen.
+		\step Eier schaumig schlagen, Zucker und Vanillezucker hinzuf"ugen und weiter schlagen.
+		\step Das ganze in die Schokoladen-Butter Masse einr"uhren.
+		\step Mehl unterheben.
+		\step Waln"usse hinzuf"ugen.
+		\step 25-30 Minuten Backen.
+		\step Abk"uhlen lassen und in Quadrate schneiden.
+	}	
+\end{recipe}
+\newpage
+
+\begin{recipe}
+[
+	preparationtime = {\unit[15]{min}},
+	portion = {\portion{6}},
+	calory,
+	source
+]
+{Mascarpone - Himbeer - Quark}
+
+	\graph
+	{
+		big=pictures/mascarpone_himbeer_quark/himbeer_quark
+	}
+	
+	\ingredients
+	{
+		1 Becher & Schlagsahne, geschlagen \\
+		2 Becher & Naturejoghurt\\
+		\unit[250]{g} & Mascarpone \\
+		\unit[500]{g} & Magerquark \\
+		\unit[500]{g} & Himbeeren (gefroren) \\
+		\unit[200]{g} & Zucker \\
+		& geraspelte Schokolade
+	}
+	
+	\preparation
+	{
+		\step Schlagsahne steif schlagen
+		\step Zucker, Quark, Joghurt und Mascarpone gut verr"uhren, bis der Zucker gut gel"ost ist
+		\step Geschlagene Sahne unterheben
+		\step Gefrorene Himbeeren und Quarkmasse abwechseln schichten.
+		\step Mit geraspelter Schokolade bestreuen
+		\step Mindestens 3 Stunden ziehen lassen
+	}	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[60]{min}},
+	bakingtime={\unit[45]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Bananenbrot}
+	
+	\graph
+	{
+		big=pictures/bananenbrot/bananenbrot.jpg
+	}
+	
+	\ingredients
+	{
+		3 & grosse, reife Bananen \\
+		\unit[100]{g} & Zucker \\
+		1-2 & Eier \\
+		\unit[1]{Pack} & Backpulver \\
+		\unit[1]{Pack} & Vanillezucker \\
+		\unit[4]{EL} & "Ol \\
+		\unit[300]{g} & Mehl \\		
+		& Mandeln \\	
+		& Schokost"uckchen \\	
+		& Butter (zum einfetten)
+	}
+	
+	\preparation
+	{
+		\step Bananen zerd"ucken.
+		\step Mandeln in Pfanne bei kleiner Hitze anr"osten, ab und zu wenden.
+		\step Zucker, Eier, "Ol, Mehl, Backpulver und Vanillezucker in Bananenmasse einr"uhren.
+		\step Mandeln und nach belieben Schockost"uckchen dem Teig hinzuf"ugen.
+		\step Teig in eine eingefettete Cakeform geben.
+		\step Bei \unit[180]{°C} f"ur \unit[45]{min} backen.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime={\unit[60]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Aargauer R"ueblitorte}
+	
+	\graph
+	{
+		big=pictures/rueblitorte/rueblitorte.png
+	}
+	
+	\ingredients
+	{
+		\bf{Torte} \\
+		\unit[300]{g} & Zucker \\
+		5 & Eier \\
+		\unit[300]{g} & gemahlene Mandeln \\
+		\unit[300]{g} & R"uebli, fein gerieben \\
+		1 & unbehandelte Zitrone \\
+		\unit[4]{EL} & Maizena \\		
+		\unit[4]{TL} & Backpulver \\
+		\unit[1/2]{TL} & Zimt \\		
+		& Nelkenpulver \\	
+		\unit[1]{Prise} & Salz 	\\
+		\unit[3]{EL} & Aprikosenkonfit"ure \\
+		\bf{Glasur} \\
+		1 & Eiweiss \\
+		\unit[300]{g} & Puderzucker \\
+		\unit[2]{EL} & Zitronensaft \\
+		\unit[2]{EL} & Wasser
+	}
+	
+	\preparation
+	{
+		\step Zucker und 5 Eigelb in einer Sch"ussel gt verr"uhren bis die Masse hell ist.
+		\step Mandeln, R"uebli, Zitronenschale und 2 Essl"offel Zitronensaft zusammen mit Maizena, Backpulver, Zimt und Nelkenpulver beigeben und gut vermischen.
+		\step 5 Eiweisse mit dem Salz steif schlagen.
+		\step Eiweiss unter Tortenmasse ziehen und in die gefettete Tortenform geben.
+		\step Bei \unit[180]{°C} f"ur \unit[60]{min} in der unteren H"alfte des Ofens backen. Herausnehmen, etwas abk"uhlen lassen.
+		\step Aprikosenkonfit"ure in einer Pfanne erw"armen und auf Torte streichen.
+		\step F"ur die Glasur 1 Eiweiss in einer Sch"ussel schaumig schlagen. 
+		\step Puderzucker, Zitronensaft und Wasser beigeben und gut verr"uhren.
+		\step Glasur "uber die Torte geben. Mit einem Spachtel verstreichen und trocknen lassen.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[25]{min}},
+	bakingtime = {\unit[14]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[230]{°C}}},
+	portion = {\portion{6-8}},
+	calory,
+	source
+	]
+	{Muffins mit geschmolzenem Schokoladenkern}
+	
+	\graph
+	{
+		big=pictures/muffins_geschmolzenerkern/muffins_geschmolzenerkern.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[200]{g} & Schokolade \\
+		\unit[150]{g} & Butter \\
+		3 (grosse) & Eier \\
+		3 (grosse) & Eigelb \\
+		\unit[140]{g} & Puderzucker \\
+		1 Prise & Salz \\
+		\unit[70]{g} & Mehl \\
+		& Vanilleeis \\
+	}
+	
+	\preparation
+	{
+		\step Die Schokolade mit der Butter "uber einem heißen Wasserbad schmelzen, leicht abk"uhlen lassen.
+		\step Die Eier und die Eigelbe in einer Sch"ussel mit dem Schneebesen verr"uhren. Den Zucker, Salz, die Schokoladenmischung und das Mehl unterr"uhren.
+		\step Den Teig gleichm"aßig in die F"ormchen f"ullen (diese sind nicht ganz gef"ullt).
+		\step Den Backofen auf \unit[230]{C} vorheizen. Die K"uchlein ca. 14-17 Minuten backen, bis sie außen fest sind und innen noch ein fl"ussiger Kern bleibt.
+		\step Muffins wenn n"otig mit einem Messer lockern, aus den Formen st"urzen und auf die Teller geben.
+		\step Warme Muffins zusammen mit Vanilleeis servieren.
+	}
+	
+	\hint
+	{
+		Werden die Muffins direkt aus dem K"uhlschrank in den Ofen geschoben, betr"agt die Backzeit etwas l"anger (ca. \unit[16]{min}).
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[20]{min}},
+	bakingtime = {\unit[25]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Himbeer-Cheesecake-Brownies}
+	
+	\graph
+	{
+		big=pictures/cheesecake_brownies/cheesecake_brownies.png
+	}
+	
+	\ingredients
+	{
+		\unit[200]{g} & Zartbitter Schokolade \\
+		\unit[250]{g} & Butter \\
+		\unit[150]{g} & Zucker \\
+		2 Fl"aschchen & Vanillearoma \\
+		3 & Eier \\
+		\unit[100]{g} & Mehl \\
+		1 Prise & Salz \\
+		\unit[30]{g} & Kakaopulver \\
+		\unit[50]{g} & Puderzucker (gesiebt) \\
+		\unit[300]{g} & Frischk"ase \\
+		\unit[100]{g} & Mascarpone \\
+		\unit[100]{g} & (TK) Himbeeren
+	}
+	
+	\preparation
+	{
+		\step Butter und Schokolade bei mittlerer Hitze schmelzen.
+		\step Zucker, 1 Fl"aschchen Vanillearoma, 2 Eier, Mehl, Salz und Kakopulver miteinander verr"uhren.
+		\step Geschmolzene Butter-Schokoladen Mischung hinzugeben und fertig r"uhren.
+		\step Den Teig in gefettete Brownie Bleche geben und glatt streichen.
+		\step Frischk"ase, Mascarpone, Vanillearoma, Puderzucker und das Ei mit einem Schneebesen verr"uhren.
+		\step Cheesecakemasse auf den Brownie Teig geben. Mit einer Gabel marmorieren.
+		\step Himbeeren dar"uber verteilen.
+		\step Im vorgeheizten Ofen bei 180°C f"ur 25 Minuten backen. Danach abk"uhlen lassen und in Rechtecke schneiden.
+	}	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[60-90]{min}},
+	bakingtime = {\unit[20]{min}},
+	bakingtemperature={\protect\bakingtemperature{topbottomheat=\unit[180]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Nutella-Herzen}
+	
+	\graph
+	{
+		small=pictures/nutellaherzen/nutellaherzen.png
+	}
+	
+	\ingredients
+	{
+		\unit[2]{EL} & warmes Wasser \\
+		\unit[1]{W"urfel} & Hefe \\
+		\unit[80]{g} & Zucker \\
+		1 & Eier \\
+		\unit[1]{TL} & Salz \\
+		\unit[500]{g} & Mehl \\
+		\unit[2]{dl} & Milch \\
+		\unit[80]{g} & weiche Butter \\
+		\unit[1/2]{Glas} & Nutella \\
+	}
+	
+	\preparation
+	{
+		\step Wasser mit Hefe und Zucker verr"uhren.
+		\step Ei, Salz, Mehl und Milch hinzuf"ugen.
+		\step Alles verr"uhren, anschliessend Butter zuf"ugen und 5-7 Minuten zu einem glatten Teig kneten.
+		\step Bei Bedarf noch etwas Mehl hinzuf"ugen, so dass ein glatter aber nicht klebender Teig entsteht.
+		\step Zu einer Kugel rollen, mit etwas Mehl bestreuen und in einer Sch"ussel 30-60 Minuten aufgehen lassen.
+		\step Teig halbieren und jede H"alfte auf etwa 20x40cm ausrollen.
+		\step Mit Nutella bestreichen.
+		\step Den Teig von beiden Seiten her aufrollen, so dass sich die Rollen in der Mitte fast ber"uhren.
+		\step Ca. 2 cm dicke Scheiben schneiden und auf ein mit Backpapier belegtes Blech legen.
+		\step In den kalten Ofen schieben und bei 180°C f"ur 20 Minuten bei Ober- und Unterhitze backen.
+	}	
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[20]{min}},
+	portion,
+	calory,
+	source
+	]
+	{Schoggimousse}
+	
+	\graph
+	{
+		small=pictures/schoggimousse/schoggimousse.jpg
+	}
+	
+	\ingredients
+	{
+		2 & Eier \\
+		\unit[50]{g} & Zucker \\
+		\unit[5]{dl} & Vollrahm \\
+		\unit[200]{g} & Schokolade \\
+	}
+	
+	\preparation
+	{
+		\step Eiweiss trennen
+		\step Eigelb mit Zucker schaumig schlagen
+		\step Eiweiss steif schlagen
+		\step Rahm steif schlagen
+		\step Schokolade schmelzen lassen, zu Zucker und Eigelb hinzuf"ugen und gut verr"uhren
+		\step Den Rahm dazugeben
+		\step Das Eiweiss darunter heben.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	portion,
+	calory,
+	source
+	]
+	{Tiramisu}
+	
+	\graph
+	{
+		big=pictures/tiramisu/tiramisu.PNG
+	}
+	
+	\ingredients
+	{
+		\unit[150]{g} & Puderzucker \\
+		6 & Eigelb \\
+		3 & Eiweiss \\
+		\unit[750]{g} & Mascarpone \\
+		etwas & Amaretto \\
+		\unit[4]{Tassen} & Kaffee \\
+		etwas & Kaluha \\
+		\unit[250]{g} & Lo"ffelbiskuits \\
+		etwas & Kakopulver \\
+		}
+
+	\preparation
+	{
+		\step Eigelb, Puderzucker, Mascarpone und etwas Amaretto cremig r"uhren
+		\step Eiweiss steif schlagen und vorsichtig unterheben
+		\step Kaffee mit etwas Kaluha mischen
+		\step Lo"ffelbiskuits im Kaffee tr"anken und auf Boden der Form verteilen
+		\step Danach eine Schicht Mascarponecreme, eine weitere Schicht Biskuits und das Ganze mit Creme zudecken
+		\step Dick mit Kakaopulver bestreuen
+		\step Mindestens 2h k"uhl stellen
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime = {\unit[40]{min}},
+	bakingtemperature={\protect\bakingtemperature{topbottomheat=\unit[180]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Knusper-Bananen-Kuchen}
+	
+	\graph
+	{
+		small=pictures/knusperbananenkuchen/knusperbananenkuchen.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[125]{g} & Butter, weich \\
+		\unit[150]{g} & Zucker \\
+		\unit[1]{Prise} & Salz \\
+		4 & frische Eier \\
+		2 & refie Bananen (ca. 300g) \\
+		\unit[3]{EL} & Zitronensaft \\		
+		\unit[175]{g} & Weissmehl \\
+		\unit[250]{g} & Knusperm"usli \\
+		\unit[1]{EL} & Zucker \\
+		\unit[1]{TL} & Backpulver \\
+		einige \\ Butterfl"ockli \\
+		wenig & Puderzucker \\
+	}
+	
+	\preparation
+	{
+		\step Butter, Zucker und Salz in einer Sch"ussel verr"uhren.
+		\step Ein Ei nach dem anderen darunterr"uhren bis die Masse hell ist.
+		\step Bananen mit Zitronensaft zerdr"ucken und unter die Masse r"uhren.
+		\step Mehl, Backpulver und 150g des Knusperm"ueslis daruntermischen.
+		\step In eine mit Backpapier ausgelegte Springform f"ullen.
+		\step Restliches M"uesli auf dem Teig verteilen.
+		\step Butterfl"ockli und Zucker dar"uber streuen.
+		\step 40 Minuten in der Mitte des auf 180° vorgeheizten Ofens backen.
+		\step Herausnehmen, auf einem Gitter ausk"uhlen lassen. Puderzucker dar"uber geben.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime = {\unit[70]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Guinness-Schoko-Kuchen}
+	
+	\graph
+	{
+		big=pictures/guinnesskuchen/guinnesscake.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[250]{g} & Butter, weich \\
+		\unit[3-4]{dl} & Guinness \\
+		\unit[75]{g} & Kakao \\
+		\unit[50]{g} & Zartbitterschokolade \\		
+		\unit[300]{g} & brauner Zucker \\
+		\unit[200]{g} & Creme Fraiche \\
+		2 & Eier \\
+		\unit[1]{Flasche} & Vanillemark \\
+		\unit[1]{Pack} & Natron \\
+		Prise & Salz \\
+		\multicolumn{2}{c}{\textbf{Topping}}\\
+		\unit[300]{g} & Frischk"ase \\
+		\unit[150]{g} & Puderzucker \\
+		\unit[125]{ml} & Rahm \\
+	}
+	
+	\preparation
+	{
+		\step Guinness in einen Topf geben, Butter hinzufügen und langsam schmelzen.
+		\step Parallel Schokolade schmelzen und dann zu Guinness und Butter geben.
+		\step Zucker und Kakao dazu geben und gut verrühren.
+		\step Eier in einer grossen Sch"ussel aufschlagen bis sie cremig hell sind. Creme Fraiche unterr"uhren und weiter schlagen.
+		\step Schoko-Guinness Masse nach und nach dazu geben, dabei st"andig r"uhren.
+		\step Zum Schluss Mehl, Salz udn Natron mischen und in den Teig sieben.
+		\step Nochmal gut verr"uhren und dann in eine Springform geben.
+		\step Bei \unit[175]{°}C im fen f"ur 60-70 Minuten backen.
+		\step Herausnehmen und komplett ausk"uhlen lassen.
+		\step F"ur das Topping: Sahne und Frischk"ase aufschlagen bis die Masse sehr fest ist. Dann nach und nach den Puderzucker dazugeben und weiterschlagen.
+		\step Masse auf den Kuchen geben und gleichm"assig verteilen.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[6]{h}},
+	bakingtime = {\unit[15]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Key-Lime-Pie}
+	
+	\graph
+	{
+		small=pictures/keylimepie/keylimepie.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[200]{g} & Butterkekse \\
+		\unit[120]{g} & Butter \\
+		\unit[4]{St"uck} & Limetten \\
+		\unit[400]{g} & Kondensmilch \\		
+		3 & Eier \\
+		\unit[240]{ml} & Rahm \\
+		\unit[1]{EL} & Zucker \\
+		\unit[1]{Pack} & Rahmhalter \\
+	}
+	
+	\preparation
+	{
+		\step Kekse fein zerkr"umeln. In der Zwischenzeit die Butter schmelzen.
+		\step Kr"umel mit Butter vermischen und in Springform geben. Gut andr"ucken und f"ur 15 Minuten in den K"uhlschrank geben.
+		\step Limetten gut waschen. Schale von einer Limette abreiben und dann alle Limetten auspressen.
+		\step Kondensmilch, 3 Eigelbe, Limettenschale und ca. 130ml des Limettensaftes gut verr"uhren. Die Mischung gut auf dem Keksboden vereteilen.
+		\step F"ur 15 Minuten in den 180°C heissen Ofen.
+		\step Den Kuchen auf Raumtemperatur abk"uhlen lassen und dann f"ur mindestens 4 Stunden im K"uhlschrank ziehen lassen.
+		\step F"ur das Topping den Rahmhalter mit dem Zucker mischen und den Rahm dazu geben. Dann steif schlagen und auf dem Pie verteilen.
+	}
+	\hint
+	{
+		Beim Abreiben der Schale darauf achten nur die obere gr"une Schicht zu erwischen. Die untere weisse Schicht ist sehr bitter.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{min}},
+	bakingtime = {\unit[20]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Beeren Ricotta T"aschchen}
+	
+	\graph
+	{
+		small=pictures/beerenricotta/beerenricotta.png
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Mehl \\
+		\unit[100]{g} & weiche Butter \\
+		\unit[1]{Pack} & Backpulver \\
+		\unit[150]{g} & Magerquark \\
+		\unit[100]{ml} & Sonnenblumen"ol \\	
+		\unit[8]{EL} & Milch \\
+		\unit[100]{g} & Zucker \\
+		\unit[400]{g} & Ricotta \\
+		\unit[2]{Pack} & Vanillinzucker \\
+		\unit[400]{g} & Beeren (gemischt) \\
+	}
+	
+	\preparation
+	{
+		\step F"ur den Teig Mehl, Backpulver, Butter, Quark, "Ol, Milch und Zucker zu einem glatten Teig verkneten.
+		\step Ricotta mit Vanillinzucker glatt r"uhren. Dann Beeren unterheben.
+		\step Teig auf bemehlter Arbeitsflache ca 2 mm d"unn ausrollen. Rechtecke ausschneiden.
+		\step Jeweils 1-2 TL F"ullung auf die Rechtecke geben und Teig "uberklappen.
+		\step F"ur 20 Minuten backen.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[5]{h}},
+	bakingtime = ,
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{C}}},
+	portion,
+	calory,
+	source
+	]
+	{Schneeflocken Torte}
+	
+	\graph
+	{
+		big=pictures/schneeflockentorte/schneeflockentorte.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[100]{g} & Butter \\
+		\unit[200]{g} & Spekulatius/Butterkekse \\
+		\unit[6]{Blatt} & Gelatine \\
+		\unit[500]{g} & Quark \\
+		\unit[500]{g} & Mascarpone \\	
+		\unit[200]{g} & Zucker \\
+		\unit[4]{EL} & Honig \\
+		\unit[1]{TL} & Zimt \\
+		\unit[6]{EL} & Zitronensaft \\
+		\unit[200]{ml} & Rahm \\
+		\unit[1]{Pack} & Vanillezucker \\
+		\unit[1]{Pack} & Rahmhalter \\
+		\unit[100]{g} & Meringue \\
+	}
+	
+	\preparation
+	{
+		\step Butter schmelzen und Spekulatius zerbröseln
+		\step Beides mischen und mit der Hand in einer Springform auf Backpapier verteilen und festdrücken
+		\step Mascarpone, Quark, Zucker, Honig, Zimt und Zitronensaft zu einer glatten Creme verrühren
+		\step Gelatine nach Packungsangabe in der Creme verarbeiten
+		\step Für mindestens 4 Stunden im Kühlschrank kaltstellen
+		\step Rahm mit Vanillezucker und Rahmhalter steif schlagen und auf dem Kuchen verteilen
+		\step Meringue zerbröseln und auf dem Kuchen verteilen
+		\step Mit Zimt aufhübschen
+	}
+	\hint{
+		Wenn man einen feinen Boden will können Kekse einfach im Blender-Mixer zerbröselt werden
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[3]{h}},
+	bakingtime = {\unit[25-30]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[175]{C}}},
+	portion,
+	calory,
+	source
+	]
+	{Schokoladen-Sahne-Sensation}
+	
+	\graph
+	{
+		small=pictures/schosase/schosase.jpg
+	}
+	
+	\ingredients
+	{
+		\multicolumn{2}{c}{\textbf{Boden}}\\
+		\unit[100]{g} & Schokolade \\
+		3 & Eier \\
+		\unit[100]{g} & Zucker \\
+		\unit[1]{Prise} & Salz \\
+		\unit[100]{g} & Mehl \\	
+		\unit[15]{g} & Kakaopulver \\
+		\unit[2]{TL} & Backpulver \\
+		\multicolumn{2}{c}{\textbf{Creme}}\\
+		\unit[2]{Blatt} & Gelatine \\
+		\unit[150]{g} & Schokolade \\
+		\unit[500]{ml} & Rahm \\
+		\unit[80]{g} & Zucker \\
+		\unit[300]{g} & TK Windbeutel \\
+		\multicolumn{2}{c}{\textbf{Deko}}\\
+	 	& Erbeeren \\
+	 	& Schokososse \\
+	 	& Puderzucker \\
+	}
+	
+	\preparation
+	{
+		\step \textbf{Boden}\\
+		Schokolade grob hacken und über einem heißen Wasserbad schmelzen. Eier trennen. Eiweiß mit den Schneebesen des Handrührgerätes steif schlagen. Zucker und Salz dabei einrieseln lassen. Eigelbe nacheinander unterrühren. Geschmolzene Schokolade unterrühren. Mehl, Kakao und Backpulver mischen, auf die Eiermasse sieben und unterheben. Teig in eine mit Backpapier ausgelegte Springform (26 cm Ø) füllen. Im vorgeheizten Backofen bei 175 °C 25?30 Minuten backen. Rand lösen und Biskuit auf einem Kuchengitter auskühlen lassen. Dann Boden aus der Form nehmen, Backpapier abziehen. Boden waagerecht halbieren.
+		\step \textbf{Creme}\\
+		Unteren Schokoboden auf eine Tortenplatte legen. Einen Tortenring darum spannen. Für die Schokocreme Gelatine in kaltem Wasser einweichen. Kuvertüre über einem heißen Wasserbad schmelzen, Zucker einrühren, abkühlen lassen. Sahne (evtl. in zwei Portionen) steif schlagen. Kuvertüre locker unter die Sahne heben. Gelatine bei milder Hitze auflösen. Ein Löffelchen Schokosahne unter die Gelatine rühren, dann diese Mischung unter die übrige Schokosahne rühren.
+		\step Etwas Schokosahne auf dem Schokoboden verteilen. Windbeutel, bis auf zwei Stück für die Deko, auf die Creme setzen. Restliche Schokosahne zwischen die Windbeutel geben. Zweiten Schokoboden darauf geben. Mit übriger Schokosahne bestreichen. Torte ca. 2 Stunden kühl stellen. Tortenring lösen. Übrige zwei Windbeutel halbieren und auf die Torte setzen. Torte nach Geschmack z.B. mit Erdbeeren, Schokosoße, Puderzucker und Minzeblättchen verzieren.
+		
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+[
+preparationtime = {\unit[60]{min}},
+bakingtime = {\unit[60]{min}},
+bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+portion,
+calory,
+source
+]
+{Haselnusstorte}
+
+\graph
+{
+	small=pictures/haselnusstorte/haselnusstorte.jpg
+}
+
+\ingredients
+{
+	\multicolumn{2}{c}{\textbf{Torte}}\\
+	\unit[220]{g} & Zucker \\
+	\unit[300]{g} & Haseln"usse (gemahlen) \\
+	6 & Eier \\
+	& Rum \\
+	& Salz \\
+	& Zwieback \\
+	\multicolumn{2}{c}{\textbf{Füllung}}\\
+	\unit[2.5]{dl} & Rahm \\		
+	\unit[100]{g} & Haselnüsse (gemahlen) \\
+	\unit[1]{Pack} & Kaffeepulver \\
+	\unit[4-5]{EL} & Zucker
+}
+
+\preparation
+{
+	\step Zucker und Eigelbe in einer Schüssel verrühren bis die Masse hell ist
+	\step Ein bis zwei Esslöffel Rum darunter rühren
+	\step Eiweisse mit einer Prise Salz steif schlagen
+	\step 2 Esslöffel Zucker zum Eischnee geben und kurz weiterschlagen
+	\step Zwieback zusammen mit 300g Haselnüssen lagenweise mit Eischnee zur Masse geben.
+	\step Eine 24cm Springform mit Backpapier auslegen und die Ränder einfetten
+	\step Masse in Springform geben und für 20 Minuten in der unteren Hälfte bei 180° backen. Danach Temperatur auf 150° stellen und für weitere 40 Minuten im Ofen lassen.
+	\step Torte herausnehmen und auskühlen lassen. Danach im Kühlschrank für 2-3 Tage aufbewahren, dann kann die Torte quer halbiert werden.
+	\step Für die Füllung den Rahm steif schlagen, danach die Haselnüsse, Kaffepulver und den Zucker zum Rahm mischen und auf die halbierte Torte geben
+}
+\hint
+{
+	Torte kann im Kühlschrank bis zu 2 Wochen aufbewahrt werden. Mit Füllung hält sie noch 1-2 Tage!
+}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[4-5]{h}},
+	bakingtime,
+	bakingtemperature=,
+	portion,
+	calory,
+	source
+	]
+	{Straciatella Mousse}
+	
+	\graph
+	{
+		big=pictures/straciatella_mousse/straciatella_mousse.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[75]{g} & Zucker \\
+		\unit[250]{g} & Mascarpone \\
+		3 & Eier \\
+		3 Blatt & Gelatine \\
+		\unit[2.5]{dl} & Rahm \\
+		\unit[150]{g} & Schokolade \\
+		\unit[2]{EL} & Zucker
+	}
+	
+	\preparation
+	{
+		\step Eigelb und Zucker schaumig rühren, Mascarpone darunterrühren
+		\step Die Gelatine gut ausdrücken und mit einem Esslöffel Wasser bei milder Hitze auflösen
+		\step Die Mascarponemasse unter ständigem Rühren zur Gelatine geben, passieren und im Kühlschrank ansulzen lassen
+		\step Eiweiss steif schlagen, Zucker einrieseln lassen und weiterschlagen, bis die Masse glänzt
+		\step Rahm steif schlagen und unter Mascarponemasse ziehen
+		\step Eiweiss zur Masse geben
+		\step Schokolade zerkleinern und unter die Masse mischen
+		\step Im Kühlschrank für 4-6 Stunden fest werden lassen
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[3]{h}},
+	bakingtime = {\unit[30]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Zimtschnecken}
+	
+	\graph
+	{
+		small=pictures/zimtschnecken/zimtschnecken.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[500]{g} & Mehl \\
+		\unit[0.5]{EL} & Salz \\
+		\unit[1.5]{EL} & Zimt \\
+		\unit[50]{g} & Rohzucker \\
+		1 Beutel & Trockenhefe \\
+		\unit[60]{g} & Butter \\
+		\unit[2.5]{dl} & Milch \\
+		\multicolumn{2}{c}{\textbf{Füllung}}\\
+		\unit[125]{g} & Butter \\
+		\unit[125]{g} & Rohzucker \\
+		\unit[2]{EL} & Zimt \\
+		\unit[2]{EL} & Mehl \\
+		\multicolumn{2}{c}{\textbf{Glasur}}\\
+		\unit[100]{g} & Puderzucker	\\	
+		\unit[1.5]{EL} & Milch \\
+	}
+	
+	\preparation
+	{
+		\step Mehl und alle Zuaten bis und mit Hefe in einer Schüssel mischen
+		\step Butter und Milch beigeben, mischen, zu einem weichen, glatten Teig kneten
+		\step Zugedeckt bei Raumtemperatur ca. 2 Std. aufs Doppelte aufgehen lassen
+		\step Für die Füllung, Butter, Zucker, Zimt und Mehl verrühren
+		\step Je 1 EL Mehl und Rohzucker mischen, Teig darauf zu einem Rechteck auswallen
+		\step Füllung darauf verteilen, dabei ringsum einen Rand von ca. 1 cm frei lassen
+		\step Teig von der Längsseite her aufrollen, mit einem Brotmesser ohne Druck in ca. 4 cm breite Stücke schneiden, auf zwei mit Backpapier belegte Bleche legen
+		\step Zimtschnecken in den kalten Ofen schieben, ca. 30 Min. bei 180 Grad (Heissluft) backen. Herausnehmen und etwas abkühlen lassen.
+		\step Puderzucker und Milch verrühren, Schnecken damit bestreichen, auf einem Gitter auskühlen
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{h}},
+	bakingtime = {\unit[50]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion,
+	calory,
+	source
+	]
+	{Crunchy Cream Torte}
+	
+	\graph
+	{
+		small=pictures/crunchycream/crunchycream.png
+	}
+	
+	\ingredients
+	{
+		\unit[175]{g} & Butter \\
+		\unit[200]{g} & Crunchy Cream (Ovo oder anderes) \\
+		\unit[150]{g} & Dunkle Kochschokolade \\
+		\unit[150]{g} & Rohzucker \\
+		6 & Eier \\
+		\unit[125]{g} & gemahlene Haselnüsse \\
+		\unit[40]{g} & gehackte Haselnüsse
+	}
+	
+	\preparation
+	{
+		\step Den Backofen auf 180° Celsius Umluft vorheizen. Die Springform
+		mit Butter einfetten und mit etwas Mehl bestreuen.
+		\step Die Schokolade, Crunchy Cream, Rohrzucker und Butter in einem grossen Topf bei geringer Hitze unter gelegentlichem Umrühren schmelzen lassen
+		\step Topf vom Herd nehmen und die gemahlenen Haselnüsse unterrühren. Dann die Eigelbe	hinzugeben und vermischen.
+		\step Die Eiweisse steif schlagen, zur Schokoladenmasse hinzugeben und vorsichtig unterheben
+		\step Die Masse in die vorbereitete Springform geben und mit den gehackten Haselnüssen bestreuen
+		\step Anschliessend für 50 bis 60 Minuten backen, bis die Oberfläche kross, aber die Torte innen
+		noch weich ist. Nach der halben Backzeit die Torte mit Alufolie	abdecken, damit sie nicht zu dunkel wird.
+		\step Die Torte vollständig abkühlen lassen und anschliessend aus der Springform lösen
+	}
+
+	\hint
+	{
+		Die Torte schmeckt auch am nächsten Tag sehr saftig und kann bis zu drei Tagen im Kühlschrank aufbewahrt werden
+	}
+\end{recipe}
+\newpage
+\section{Cocktails}
+\begin{recipe}
+	[
+	preparationtime = {\unit[25]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Zuckersirup}
+	
+	\graph
+	{
+	}
+	
+	\ingredients
+	{
+		\unit[2]{Teile} & Wasser \\
+		\unit[3]{Teile} & Zucker
+	}
+	
+	\preparation
+	{
+		\step Der weiße Rübenzucker Zucker wird einen Topf gefüllt und mit möglichst kochendem Wasser übergossen
+		\step Die Mischung wird zwischen fünf und zwanzig Minuten bei 100 Grad weitergekocht
+		\step Am Ende der Sirupherstellung sollte ein klarer, zähflüssiger Sirup entstehen, der in ein sauberes und verschließbares Gefäß gefüllt wird
+	}
+
+	\hint{
+		Der selbst hergestellte Zuckersirup ist im Kühlschrank einige Wochen haltbar. Nach dem Befüllen und nach jeder Entnahme sollte die Flasche von außen gründlich gereinigt werden
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[5]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Amaretto Ginger Ale}
+	
+	\graph
+	{
+		small=pictures/amaretto_ginger_ale/amaretto_ginger_ale.png
+	}
+	
+	\ingredients
+	{
+		\unit[40]{cl} & Amaretto \\
+		\unit[20]{cl} & Zitronensaft \\
+		& Ginger Ale \\
+		& Eisw"urfel
+	}
+	
+	\preparation
+	{
+		\step Eisw"urfel in das Glas geben
+		\step Amaretto und Zitronensaft dazu geben.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[5]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Strawberry Kiss}
+	
+	\graph
+	{
+		big=pictures/strawberry_kiss/strawberry_kiss.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[2]{cl} & Jack Daniel's \\
+		\unit[2]{cl} & Erdbeersirup \\
+		3 & Erdbeeren \\
+		& fein gestossenes Eis \\
+		& Rahm
+	}
+	
+	\preparation
+	{
+		\step Rahm schlagen dass er etwas steif wird.
+		\step Alles bis auf den Rahm in einen Mixer geben und ca. 10 Sekunden mixen.
+		\step In ein (gek"uhltes) Glas geben, Rahm langsam dar"uber giessen oder l"offeln.
+	}
+	
+	\hint
+	{
+		Funktioniert auch mit Himbeeren \& Himbeersirup oder anderen Fr"uchten.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[5]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Whiskey Sour}
+	
+	\graph
+	{
+		big=pictures/whiskey_sour/whiskey_sour.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[4]{cl} & Whisky \\
+		\unit[2]{cl} & Zitronensaft \\
+		\unit[1]{cl} & Zuckersirup \\
+		\unit[1]{cl} & Eiweiss \\
+		& Eiswürfel \\
+	}
+	
+	\preparation
+	{
+		\step Eis und alle Zutaten in Shaker geben
+		\step Gut 20s stark schütteln
+		\step In ein Glas abseihen
+	}
+	
+	\hint
+	{
+		Gleiches Rezept funktioniert auch für andere Sours wie Amaretto.
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[5]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Gin Fizz}
+	
+	\graph
+	{
+		small=pictures/ginfizz/ginfizz.png
+	}
+	
+	\ingredients
+	{
+		\unit[5]{cl} & Gin \\
+		\unit[3]{cl} & Zitronensaft \\
+		\unit[2]{cl} & Zuckersirup \\
+		\unit[10]{cl} & Sodawasser \\
+		& Eiswürfel \\
+	}
+	
+	\preparation
+	{
+		\step Gin, Zitronensaft und Zuckersirup mit Eiswürfeln in Shaker geben
+		\step Gut schütteln
+		\step In ein Longdrinkglas abseihen
+		\step Mit Soda auffüllen
+	}
+\end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[5]{min}},
+	bakingtime,
+	bakingtemperature,
+	portion = {\portion{1}},
+	calory,
+	source
+	]
+	{Sloe Gin Fizz}
+	
+	\graph
+	{
+		small=pictures/sloeginfizz/sloeginfizz.png
+	}
+	
+	\ingredients
+	{
+		\unit[3]{cl} & Sloe Gin \\
+		\unit[2]{cl} & Gin \\
+		\unit[3]{cl} & Zitronensaft \\
+		\unit[1]{cl} & Zuckersirup \\
+		\unit[10]{cl} & Sodawasser \\
+		& Eiswürfel \\
+	}
+	
+	\preparation
+	{
+		\step Sloe Gin, Gin, Zitronensaft und Zuckersirup mit Eiswürfeln in Shaker geben
+		\step Gut schütteln
+		\step In ein Longdrinkglas abseihen
+		\step Mit Soda auffüllen
+	}
+\end{recipe}
+\newpage
+\end{document} 
