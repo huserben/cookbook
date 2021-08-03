@@ -18,7 +18,7 @@ jobs:
             apk add curl
             curl -OL https://mirrors.ctan.org/fonts/emerald.zip
             unzip emerald.zip
-            mv -v ./emerald/*  /opt/texlive/texmf-local/
+            cp -a ./emerald/. /opt/texlive/texmf-local/
             mktexlsr
             updmap-sys --force --enable Map= /opt/texlive/texmf-local/fonts/map/dvips/emerald.map
             mktexlsr
