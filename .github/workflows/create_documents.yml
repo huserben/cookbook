@@ -15,6 +15,7 @@ jobs:
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
+            kpsewhich --var-value TEXMFLOCAL
             apk add curl
             curl -OL https://mirrors.ctan.org/fonts/emerald.zip
             unzip emerald.zip
