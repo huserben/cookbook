@@ -22,7 +22,7 @@ jobs:
             mktexlsr
             updmap-sys --force --enable Map= /opt/texlive/texmf-local/fonts/map/dvips/emerald.map
             mktexlsr
-            xelatex.exe -synctex=1 -interaction=nonstopmode "./MyCookbook".tex
+            xelatex -synctex=1 -interaction=nonstopmode "./MyCookbook".tex
 
       - name: Create deploy directory
         run: mkdir deploy
