@@ -10,8 +10,10 @@ a4paper,
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-
 \usepackage{nicefrac}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 \usepackage[
     handwritten,
@@ -2670,6 +2672,46 @@ source
 		Die Torte schmeckt auch am nächsten Tag sehr saftig und kann bis zu drei Tagen im Kühlschrank aufbewahrt werden
 	}
 \end{recipe}
+\newpage
+\begin{recipe}
+	[
+	preparationtime = {\unit[30]{h}},
+	bakingtime = {\unit[45]{min}},
+	bakingtemperature={\protect\bakingtemperature{fanoven=\unit[180]{°C}}},
+	portion,
+	calory,
+	source = https://www.chefkoch.de/rezepte/1369411241852214/Englischer-Brotpudding.html
+	]
+	{Brotpudding}
+	
+	\graph
+	{
+		big=pictures/brotpudding/brotpudding.jpg
+	}
+	
+	\ingredients
+	{
+		\unit[450]{g} & Brötchen \\
+		\unit[400]{ml} & Milch \\
+		2 & Eier \\
+		\unit[70]{g} & Puderzucker \\
+		\unit[1]{TL} & Vanillezucker \\
+		\unit[125]{ml} & Rahm oder Milch \\
+		 & Schokosplitter \\
+		\unit[3]{EL} & Whisky oder Rum
+	}
+	
+	\preparation
+	{
+		\step Brot in ca. 2cm grosse Würfel schneiden, in eine Schüssel geben un dmit der Milch übergiessen. Ca. 15 Minuten quellen lassen.
+		\step Eier mit Puderzucker und Vanillezucker schaumig schlagen. Rahm dazugeben. Falls gewünscht Whisky oder Rum hinzufügen.
+		\step Die Hälfte der Brotwürfel in eine ausgebutterte Form geben und Schokosplitter darauf verteilen.
+		\step Die andere Hälfte dazu geben und mit der Creme übergiessen.
+		\step Im Wasserbad 45 Minuten bei 180° im Ofen backen.
+	}
+
+\end{recipe}
+
 \newpage
 \section{Cocktails}
 \begin{recipe}
