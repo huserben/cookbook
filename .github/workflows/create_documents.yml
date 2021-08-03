@@ -20,7 +20,7 @@ jobs:
             unzip emerald.zip
             cp -a ./emerald/. /opt/texlive/texmf-local/
             mktexlsr
-            updmap-sys --force --enable Map= /opt/texlive/texmf-local/fonts/map/dvips/emerald.map
+            updmap-sys --force --enable Map=emerald.map
             mktexlsr
             pdflatex -synctex=1 -interaction=nonstopmode "./MyCookbook".tex
 
