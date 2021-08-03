@@ -17,7 +17,7 @@ jobs:
           unzip emerald.zip
 
       - name: Create PDFs
-      - uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v2
         with:
           root_file: MyCookbook.tex
         env:
