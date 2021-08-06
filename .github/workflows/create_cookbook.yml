@@ -3,12 +3,24 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   Publish-Cookbook:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install TeXtidote
+        run: |
+          curl -Ol https://github.com/sylvainhalle/textidote/releases/download/v0.8.2/textidote_0.8.2_all.deb
+          apt-get install ./textidote_X.Y.Z_all.deb
+
+      - name: Run TeXtidote
+        run: |
+          textidote
 
       - name: Create PDFs
         uses: xu-cheng/texlive-action/full@v1
