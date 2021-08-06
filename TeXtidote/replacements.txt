@@ -1,12 +1,13 @@
 # Empty lines beginning with a pound sign are ignored
 # Search and replace patterns are separated by a tab
 find	replace
-(small)(.*)(.png)	Bild
-(big)(.*)(.png)	Bild
-(small)(.*)(.jpg)	Bild
-(big)(.*)(.jpg)	Bild
-\\begin\{recipe\}	Rezept
-\\end\{recipe\}	Rezept
+(small)(.*)(.png)	 
+(big)(.*)(.png)	 
+(small)(.*)(.jpg)	 
+(big)(.*)(.jpg)	 
+\\begin\{recipe\}	 
+\\end\{recipe\}	 
 \{c\}	 
 protect\\bakingtemperature\{fanoven	 
 protect\\bakingtemperature\{topbottomheat	 
+\\step	 
