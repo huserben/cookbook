@@ -1,0 +1,6 @@
+--output singleline
+--dict TeXtidote/ignore_words.txt
+--replace TeXtidote/replacements.txt
+--ignore sh:nobreak,sh:d:002,sh:nonp,sh:seclen,lt:de:BISSTRICH,lt:de:COMMA_PARENTHESIS_WHITESPACE,lt:de:DE_CASE,lt:de:PUNCTUATION_PARAGRAPH_END
+--remove-macros graph,step
+ --check de_CH MyCookbook.tex
