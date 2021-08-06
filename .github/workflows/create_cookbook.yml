@@ -37,6 +37,7 @@ jobs:
             pdflatex -synctex=1 -interaction=nonstopmode "./MyCookbook".tex
       
       - name: Copy Cookbook
+        if: github.ref == 'refs/heads/main'
         uses: canastro/copy-file-action@master
         with:
           source: "MyCookbook.pdf"
